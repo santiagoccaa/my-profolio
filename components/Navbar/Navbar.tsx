@@ -8,9 +8,6 @@ import { LuX } from "react-icons/lu";
 
 const navbarHome = [
   {
-    name: "Home"
-  },
-  {
     name: "About"
   },
   {
@@ -21,13 +18,15 @@ const navbarHome = [
   }
 ]
 
-
 export const NavBar = () => {
 
   const [opennav, setOpenNav] = useState(false)
 
   return (
-    <nav className="py-3 bg-linear-to-b from-secondary to-black">
+    <nav className="py-3 absolute top-0 left-0 right-0 w-full z-20">
+      <div className="absolute -top-40 -left-40 w-80 aspect-square bg-red">
+
+      </div>
       <PageContainer>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
@@ -39,7 +38,7 @@ export const NavBar = () => {
             <ul className="flex items-center gap-12">
               {
                 navbarHome.map((item, index) =>
-                  <li key={index} className="text-lg font-medium relative group hover:text-primary transition-all duration-300">
+                  <li key={index} className="text-lg font-medium relative group hover:text-primary transition-all duration-300 cursor-pointer">
                     {item.name}
                     <div className="absolute -bottom-1 left-0 w-0 h-[1.5px] group-hover:w-full bg-primary transition-all duration-300" />
                   </li>

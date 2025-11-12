@@ -7,7 +7,7 @@ interface PageContainerProps {
 
 export const PageContainer = ({ children }: PageContainerProps) => {
     return (
-        <div className="container mx-auto px-2 md:px-4 lg:px-8">
+        <div className="container mx-auto px-4 md:px-12 lg:px-16 max-w-7xl">
             {children}
         </div>
     )

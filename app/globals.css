@@ -16,3 +16,42 @@ body {
   background: var(--black);
   color     : white;
 }
+
+@keyframes slide-horizontal {
+    0%, 100% {
+        left: -20%;
+    }
+    50% {
+        left: 100%;
+    }
+}
+
+@keyframes slide-horizontal-slow {
+    0%, 100% {
+        left: -20%;
+    }
+    50% {
+        left: 100%;
+    }
+}
+
+@keyframes slide-horizontal-fast {
+    0%, 100% {
+        left: -20%;
+    }
+    50% {
+        left: 100%;
+    }
+}
+
+.animate-slide-horizontal {
+    animation: slide-horizontal 25s ease-in-out infinite;
+}
+
+.animate-slide-horizontal-slow {
+    animation: slide-horizontal-slow 35s ease-in-out infinite;
+}
+
+.animate-slide-horizontal-fast {
+    animation: slide-horizontal-fast 20s ease-in-out infinite;
+}

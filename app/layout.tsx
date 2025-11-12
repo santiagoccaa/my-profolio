@@ -22,10 +22,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${fredoka.className} overflow-hidden relative`}
+        className={`${fredoka.className} relative`}
       >
         <NavBar />
-        <main>
+        <main className="h-screen">
           <PageContainer>
             {children}
           </PageContainer>
