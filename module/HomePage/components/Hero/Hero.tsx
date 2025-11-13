@@ -6,6 +6,7 @@ import { MdOutlineEmojiPeople } from "react-icons/md"
 import { RiArrowDownDoubleFill } from "react-icons/ri"
 import { IconSkill } from "./IconSkill"
 import { NestedCircles } from "./NestedCircles"
+import { TitleSection } from "@/components"
 
 type Social = {
     href: string,
@@ -53,10 +54,7 @@ export const Hero = () => {
                 </div>
                 {/* Lado izquiero - mobile:superior */}
                 <div className="w-full lg:w-1/2 relative z-10 flex-1 pt-20 flex flex-col justify-center gap-y-3">
-                    <div className="px-2 py-[1.5px] rounded-full border-2 border-primary flex items-center gap-1 w-fit ">
-                        <span className="w-1 h-1 bg-primary rounded-full" />
-                        <h2 className="text-xs uppercase">Full-Stack Web-Developer</h2>
-                    </div>
+                    <TitleSection text="Full-Stack Web-Developer" />
                     <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
                         Porfolio <br /> <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl bg-linear-to-r from-primary to-secondary bg-clip-text text-transparent text-nowrap">Santiago Contreras</span>
                     </h2>

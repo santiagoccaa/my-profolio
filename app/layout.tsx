@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import { Fredoka } from "next/font/google";
 import "./globals.css";
-import { NavBar, PageContainer } from "@/components";
+import { NavBar } from "@/components";
 
 const fredoka = Fredoka({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
-
 
 export const metadata: Metadata = {
   title: "Santiago Contreras",
@@ -26,9 +25,9 @@ export default function RootLayout({
       >
         <NavBar />
         <main className="h-screen">
-          <PageContainer>
-            {children}
-          </PageContainer>
+
+          {children}
+
         </main>
       </body>
     </html>
