@@ -1,44 +1,58 @@
 @import "tailwindcss";
 
 :root {
-  --black    : #0a0a0a;
-  --primary  : #667eea;
-  --secondary: #764ba2;
+    --black    : #0a0a0a;
+    --primary  : #667eea;
+    --secondary: #764ba2;
 }
 
 @theme inline {
-  --color-black    : var(--black);
-  --color-primary  : var(--primary);
-  --color-secondary: var(--secondary);
+    --color-black    : var(--black);
+    --color-primary  : var(--primary);
+    --color-secondary: var(--secondary);
 }
 
 body {
-  background: var(--black);
-  color     : white;
+    background: var(--black);
+    color     : white;
+}
+
+.gradienImage {
+    mask-image: linear-gradient(var(--black) 90%,
+            transparent);
 }
 
 @keyframes slide-horizontal {
-    0%, 100% {
+
+    0%,
+    100% {
         left: -20%;
     }
+
     50% {
         left: 100%;
     }
 }
 
 @keyframes slide-horizontal-slow {
-    0%, 100% {
+
+    0%,
+    100% {
         left: -20%;
     }
+
     50% {
         left: 100%;
     }
 }
 
 @keyframes slide-horizontal-fast {
-    0%, 100% {
+
+    0%,
+    100% {
         left: -20%;
     }
+
     50% {
         left: 100%;
     }

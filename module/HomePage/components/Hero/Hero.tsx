@@ -83,7 +83,7 @@ export const Hero = () => {
                     <div className="absolute top-8 left-0 block md:hidden">
                         <NestedCircles sizes={[250, 200, 150, 100, 50, 25]} />
                     </div>
-                    <Image src={"/me.png"} width={800} height={800} alt="me" className="h-full lg:h-[70%] xl:h-[90%] aspect-auto absolute bottom-0" style={{ filter: "drop-shadow(0 0 1px #667eea" }} />
+                    <Image src={"/me.png"} width={800} height={800} alt="me" className="h-full lg:h-[70%] xl:h-[90%] aspect-auto absolute bottom-0 gradienImage" style={{ filter: "drop-shadow(0 0 1px #667eea" }} />
                 </div>
             </div>
         </>

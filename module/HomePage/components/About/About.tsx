@@ -1,7 +1,6 @@
 import { PageContainer, TitleSection } from "@/components"
 import { Items } from "./Items"
 
-
 export const About = () => {
     return (
         <div className="relative">
