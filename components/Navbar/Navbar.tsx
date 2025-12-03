@@ -23,7 +23,7 @@ export const NavBar = () => {
   const [opennav, setOpenNav] = useState(false)
 
   return (
-    <nav className="py-3 absolute top-0 left-0 right-0 w-full z-20">
+    <nav className="py-3 absolute top-0 left-0 right-0 w-full z-20 hidden">
       <div className="absolute -top-40 -left-40 w-80 aspect-square bg-red">
 
       </div>

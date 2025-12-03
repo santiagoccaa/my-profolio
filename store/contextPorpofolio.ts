@@ -13,7 +13,7 @@ interface PorfolioState {
     reset: () => void;
 }
 
-export const usePorfolioStore = create<PorfolioState>((set, get) => ({
+export const usePorfolioStore = create<PorfolioState>((set) => ({
     page: 1,
     size: 10,
     currentModule: null,

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Fredoka } from "next/font/google";
+import { Saira } from "next/font/google";
 import "./globals.css";
 import { NavBar } from "@/components";
 
-const fredoka = Fredoka({
+const fredoka = Saira({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
@@ -19,9 +19,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${fredoka.className} relative`}
+        suppressHydrationWarning={true}
+        className={`${fredoka.className} relative floating`}
       >
         <NavBar />
         <main className="h-screen">
