@@ -5,6 +5,7 @@ import { FaXmark } from "react-icons/fa6"
 import { IoArrowBackOutline } from "react-icons/io5"
 
 export const Projects = () => {
+    
     return (
         <div className='py-16 relative min-h-dvh'>
 
@@ -29,18 +30,17 @@ export const Projects = () => {
                 </div>
                 {/* cards projects */}
                 <div className='flex items-center justify-center mt-8'>
-                    <div className='flex gap-2'>
-
+                    <div className='flex flex-col md:flex-row items-center justify-center gap-4 gap-y-16 w-full overflow-x-auto py-8'>
                         {/* Card1 */}
-                        <div className="cardPolygon w-72 h-96 relative group" style={{ filter: 'drop-shadow(5px 0.1px 20px #667eea)' }}>
-                            <div className='polygon1 transition-all duration-700 bg-[#0a0a0a] w-72 h-96 transform-r relative group'>
+                        <div className="cardPolygon w-72 h-96 relative group" style={{ filter: 'drop-shadow(2px 0.1px 15px #667eea)' }}>
+                            <div className='polygon1 transition-all duration-700 w-72 h-96 transform-r relative group'>
                                 <div className="w-72 h-full absolute top-0 left-0">
                                     <Image src={PROJECT_GLASSES} fill alt="project glasses" className="bg-center" />
                                 </div>
-                                <div className="h-0 w-full absolute bottom-0 left-0 group-hover:h-96 duration-300 overflow-hidden z-50">
+                                <div className="h-full lg:h-0 w-full absolute bottom-0 left-0 group-hover:h-96 duration-300 overflow-hidden z-50">
                                     <div className="absolute bottom-0 w-full h-96 bg-black p-4">
                                         <p className="text-md font-light text-white ml-2">
-                                             Laudantium fugiat eius expedita ex ipsum, deleniti, repellat necessitatibus soluta natus reprehenderit alias nesciunt asperiores consequatur error, accusamus itaque laborum debitis dignissimos.
+                                            Laudantium fugiat eius expedita ex ipsum, deleniti, repellat necessitatibus soluta natus reprehenderit alias nesciunt asperiores consequatur error, accusamus itaque laborum debitis dignissimos.
                                         </p>
                                         <div className="flex gap-2 items-center justify-center mt-4 pr-10">
                                             <div className="w-8 h-8 rounded-full bg-red-800"></div>
@@ -52,7 +52,7 @@ export const Projects = () => {
                                 </div>
                             </div>
                             <div className='absolute bottom-16 left-0 px-4 w-full'>
-                                <button className="absolute text-xl p-1 rounded-full text-black opacity-0 group-hover:opacity-100 bg-white top-3 right-18 -rotate-135 hover:scale-105 hover:shadow-2xl hover:-rotate-205 cursor-pointer duration-300">
+                                <button className="absolute text-xl p-1 rounded-full text-black lg:opacity-0 group-hover:opacity-100 bg-white top-3 right-18 -rotate-135 hover:scale-105 hover:shadow-2xl hover:-rotate-205 cursor-pointer duration-300">
                                     <IoArrowBackOutline />
                                 </button>
                                 <h2 className='text-xs uppercase tracking-[0.25em]'>Front end</h2>
@@ -61,12 +61,12 @@ export const Projects = () => {
                         </div>
 
                         {/* Card 2 */}
-                        <div className="cardPolygon w-72 h-89 relative group" style={{ filter: 'drop-shadow(5px 0.1px 20px #667eea)' }}>
-                            <div className='polygon2 transition-all duration-700 bg-slate-800 w-72 h-89 relative group'>
+                        <div className="cardPolygon w-72 h-89 relative group" style={{ filter: 'drop-shadow(2px 2px 15px #667eea)' }}>
+                            <div className='polygon2 transition-all duration-700 w-72 h-89 relative group'>
                                 <div className="w-72 h-89 absolute top-0 left-0">
                                     <Image src={PROJECT_VOYAGGI} fill alt="project glasses" className="bg-center" />
                                 </div>
-                                <div className="h-0 w-full absolute bottom-0 left-0 group-hover:h-89 duration-300 overflow-hidden z-50">
+                                <div className="h-full lg:h-0 w-full absolute bottom-0 left-0 group-hover:h-89 duration-300 overflow-hidden z-50">
                                     <div className="absolute bottom-0 w-full h-96 bg-black p-4">
                                         <p className="text-md font-light text-white mt-8 ml-8">
                                             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -80,9 +80,8 @@ export const Projects = () => {
                                     </div>
                                 </div>
                             </div>
-
                             <div className='absolute bottom-9 left-2 w-full text-right pr-10'>
-                                <button className="absolute text-xl p-1 rounded-full text-black opacity-0 group-hover:opacity-100 bg-white top-3 left-12 -rotate-45 hover:scale-105 hover:shadow-2xl hover:rotate-45 cursor-pointer duration-300">
+                                <button className="absolute text-xl p-1 rounded-full text-black lg:opacity-0 group-hover:opacity-100 bg-white top-3 left-12 -rotate-45 hover:scale-105 hover:shadow-2xl hover:rotate-45 cursor-pointer duration-300">
                                     <IoArrowBackOutline />
                                 </button>
                                 <h2 className='text-xs uppercase tracking-[0.25em]'>Full stack</h2>
@@ -91,12 +90,12 @@ export const Projects = () => {
                         </div>
 
                         {/* Card 3 */}
-                        <div className="cardPolygon w-72 h-96 relative group" style={{ filter: 'drop-shadow(5px 0.1px 20px #667eea)' }}>
-                            <div className='polygon3 transition-all duration-700 bg-slate-900 w-72 h-96 relative group'>
+                        <div className="cardPolygon w-72 h-96 relative group" style={{ filter: 'drop-shadow(2px 0.1px 15px #667eea)' }}>
+                            <div className='polygon3 transition-all duration-700 w-72 h-96 relative group'>
                                 <div className="w-72 h-96 absolute bottom-0 left-0">
                                     <Image src={PROJECT_TASTENEST} fill alt="project glasses" className="bg-center" />
                                 </div>
-                                <div className="h-0 w-full absolute bottom-0 left-0 group-hover:h-96 duration-300 overflow-hidden z-50">
+                                <div className="h-full lg:h-0 w-full absolute bottom-0 left-0 group-hover:h-96 duration-300 overflow-hidden z-50">
                                     <div className="absolute bottom-0 w-full h-96 bg-black p-4 px-8">
                                         <p className="text-md font-light text-white">
                                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et assumenda sunt quibusdam, repudiandae quam aut eius odit quasi dolores officiis eos quidem possimus! Quis?
@@ -111,7 +110,7 @@ export const Projects = () => {
                                 </div>
                             </div>
                             <div className='absolute bottom-16 right-0 overflow-hidden text-right pr-8 w-full'>
-                                <button className="absolute text-xl p-1 rounded-full text-black opacity-0 group-hover:opacity-100 bg-white top-3 left-12 -rotate-45 hover:scale-105 hover:shadow-2xl hover:rotate-45 cursor-pointer duration-300">
+                                <button className="absolute text-xl p-1 rounded-full text-black lg:opacity-0 group-hover:opacity-100 bg-white top-3 left-12 -rotate-45 hover:scale-105 hover:shadow-2xl hover:rotate-45 cursor-pointer duration-300">
                                     <IoArrowBackOutline />
                                 </button>
                                 <h2 className='text-xs uppercase tracking-[0.25em]'>Back end</h2>
