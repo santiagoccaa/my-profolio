@@ -1,7 +1,8 @@
 import { PageContainer } from "@/components"
-import { PROJECT_GLASSES } from "@/constants/images/images"
+import { PROJECT_GLASSES, PROJECT_TASTENEST, PROJECT_VOYAGGI } from "@/constants/images/images"
 import Image from "next/image"
 import { FaXmark } from "react-icons/fa6"
+import { IoArrowBackOutline } from "react-icons/io5"
 
 export const Projects = () => {
     return (
@@ -31,34 +32,88 @@ export const Projects = () => {
                     <div className='flex gap-2'>
 
                         {/* Card1 */}
-                        <div className="cardPolygon w-72 h-96 relative" style={{ filter: 'drop-shadow(5px 0.1px 20px #667eea)' }}>
-                            <div className='polygon1 transition-all duration-700 bg-slate-900 w-72 h-96 transform-r relative'>
-                                <div className="bg-linear-to-t from-primary via-slate-900 to-slate-900 absolute bottom-0 left-0 h-28 w-full" />
+                        <div className="cardPolygon w-72 h-96 relative group" style={{ filter: 'drop-shadow(5px 0.1px 20px #667eea)' }}>
+                            <div className='polygon1 transition-all duration-700 bg-[#0a0a0a] w-72 h-96 transform-r relative group'>
+                                <div className="w-72 h-full absolute top-0 left-0">
+                                    <Image src={PROJECT_GLASSES} fill alt="project glasses" className="bg-center" />
+                                </div>
+                                <div className="h-0 w-full absolute bottom-0 left-0 group-hover:h-96 duration-300 overflow-hidden z-50">
+                                    <div className="absolute bottom-0 w-full h-96 bg-black p-4">
+                                        <p className="text-md font-light text-white ml-2">
+                                             Laudantium fugiat eius expedita ex ipsum, deleniti, repellat necessitatibus soluta natus reprehenderit alias nesciunt asperiores consequatur error, accusamus itaque laborum debitis dignissimos.
+                                        </p>
+                                        <div className="flex gap-2 items-center justify-center mt-4 pr-10">
+                                            <div className="w-8 h-8 rounded-full bg-red-800"></div>
+                                            <div className="w-8 h-8 rounded-full bg-sky-800"></div>
+                                            <div className="w-8 h-8 rounded-full bg-amber-800"></div>
+                                            <div className="w-8 h-8 rounded-full bg-purple-800"></div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div className='absolute bottom-16 left-0 px-4 w-full'>
+                                <button className="absolute text-xl p-1 rounded-full text-black opacity-0 group-hover:opacity-100 bg-white top-3 right-18 -rotate-135 hover:scale-105 hover:shadow-2xl hover:-rotate-205 cursor-pointer duration-300">
+                                    <IoArrowBackOutline />
+                                </button>
                                 <h2 className='text-xs uppercase tracking-[0.25em]'>Front end</h2>
                                 <h2 className='text-2xl font-medium'>Taste Nest</h2>
                             </div>
                         </div>
 
                         {/* Card 2 */}
-                        <div className="cardPolygon w-72 h-89 relative" style={{ filter: 'drop-shadow(5px 0.1px 20px #667eea)' }}>
-                            <Image src={PROJECT_GLASSES} width={400} height={400} alt="project glasses" className="w-72 h-96 absolute top-0 left-0" />
-                            <div className='polygon2 bg-linear-to-t transition-all duration-700 bg-transparent w-72 h-89 relative'>
+                        <div className="cardPolygon w-72 h-89 relative group" style={{ filter: 'drop-shadow(5px 0.1px 20px #667eea)' }}>
+                            <div className='polygon2 transition-all duration-700 bg-slate-800 w-72 h-89 relative group'>
+                                <div className="w-72 h-89 absolute top-0 left-0">
+                                    <Image src={PROJECT_VOYAGGI} fill alt="project glasses" className="bg-center" />
+                                </div>
+                                <div className="h-0 w-full absolute bottom-0 left-0 group-hover:h-89 duration-300 overflow-hidden z-50">
+                                    <div className="absolute bottom-0 w-full h-96 bg-black p-4">
+                                        <p className="text-md font-light text-white mt-8 ml-8">
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                        </p>
+                                        <div className="flex gap-2 items-center justify-center mt-4 pr-10">
+                                            <div className="w-8 h-8 rounded-full bg-red-800"></div>
+                                            <div className="w-8 h-8 rounded-full bg-sky-800"></div>
+                                            <div className="w-8 h-8 rounded-full bg-amber-800"></div>
+                                            <div className="w-8 h-8 rounded-full bg-purple-800"></div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
-                            <div className='absolute bottom-8 left-2 w-full text-center'>
+                            <div className='absolute bottom-9 left-2 w-full text-right pr-10'>
+                                <button className="absolute text-xl p-1 rounded-full text-black opacity-0 group-hover:opacity-100 bg-white top-3 left-12 -rotate-45 hover:scale-105 hover:shadow-2xl hover:rotate-45 cursor-pointer duration-300">
+                                    <IoArrowBackOutline />
+                                </button>
                                 <h2 className='text-xs uppercase tracking-[0.25em]'>Full stack</h2>
                                 <h2 className='text-2xl font-medium'>Voyaggi</h2>
                             </div>
                         </div>
 
                         {/* Card 3 */}
-                        <div className="cardPolygon w-72 h-96 relative" style={{ filter: 'drop-shadow(5px 0.1px 20px #667eea)' }}>
-                            <div className='polygon3 transition-all duration-700  flex flex-col justify-end items-center py-15 bg-slate-900 w-72 h-96 relative'>
-                                <div className="bg-linear-to-t from-primary via-slate-900 to-slate-900 absolute bottom-0 left-0 h-28 w-full" />
+                        <div className="cardPolygon w-72 h-96 relative group" style={{ filter: 'drop-shadow(5px 0.1px 20px #667eea)' }}>
+                            <div className='polygon3 transition-all duration-700 bg-slate-900 w-72 h-96 relative group'>
+                                <div className="w-72 h-96 absolute bottom-0 left-0">
+                                    <Image src={PROJECT_TASTENEST} fill alt="project glasses" className="bg-center" />
+                                </div>
+                                <div className="h-0 w-full absolute bottom-0 left-0 group-hover:h-96 duration-300 overflow-hidden z-50">
+                                    <div className="absolute bottom-0 w-full h-96 bg-black p-4 px-8">
+                                        <p className="text-md font-light text-white">
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et assumenda sunt quibusdam, repudiandae quam aut eius odit quasi dolores officiis eos quidem possimus! Quis?
+                                        </p>
+                                        <div className="flex gap-2 items-center mt-4">
+                                            <div className="w-8 h-8 rounded-full bg-red-800"></div>
+                                            <div className="w-8 h-8 rounded-full bg-sky-800"></div>
+                                            <div className="w-8 h-8 rounded-full bg-amber-800"></div>
+                                            <div className="w-8 h-8 rounded-full bg-purple-800"></div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div className='absolute bottom-16 right-0 text-right pr-8 w-full'>
+                            <div className='absolute bottom-16 right-0 overflow-hidden text-right pr-8 w-full'>
+                                <button className="absolute text-xl p-1 rounded-full text-black opacity-0 group-hover:opacity-100 bg-white top-3 left-12 -rotate-45 hover:scale-105 hover:shadow-2xl hover:rotate-45 cursor-pointer duration-300">
+                                    <IoArrowBackOutline />
+                                </button>
                                 <h2 className='text-xs uppercase tracking-[0.25em]'>Back end</h2>
                                 <h2 className='text-2xl font-medium'>TaskFlow API</h2>
                             </div>
