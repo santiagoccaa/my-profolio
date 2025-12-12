@@ -1,5 +1,5 @@
 import { Modal } from '@/components'
-import { Hero, Projects } from './components'
+import { About, Hero, Projects } from './components'
 
 export function HomePage() {
     return (
@@ -7,6 +7,7 @@ export function HomePage() {
             <Modal />
             <Hero />
             <Projects />
+            <About />
         </>
     )
 }

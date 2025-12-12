@@ -13,9 +13,9 @@ export const Projects = () => {
     const { setOpenModal, setProject } = usePorfolioStore()
 
     return (
-        <div className='py-16 relative min-h-dvh'>
+        <div className='py-16 relative'>
 
-            <div className="w-full h-20 opacity-50 absolute bottom-0 left-0 bg-linear-to-t from-primary via-transparent to-transparent" />
+            <div className="w-full h-20 opacity-50 absolute bottom-0 left-0" />
             <PageContainer>
                 <div className="absolute bottom-20 left-8 border-4 border-primary p-2 rounded-full" />
                 <div className="absolute bottom-40 left-16 bg-primary p-1 rounded-full" />
