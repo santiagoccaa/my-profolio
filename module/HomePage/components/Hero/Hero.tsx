@@ -27,7 +27,7 @@ const skills: IconSkillProps[] = [
 
 export const Hero = () => {
     return (
-        <div className="overflow-hidden group">
+        <div className="overflow-hidden">
             <div className="absolute inset-0 top-0 left-0 h-screen w-full flex justify-center overflow-hidden">
                 <div className="w-[200%] lg:w-full max-w-7xl aspect-square absolute -top-[50%] lg:-top-[110%] 2xl:-top-[95%] opacity-60"
                     style={{
@@ -56,7 +56,7 @@ export const Hero = () => {
                                 ))
                             }
                         </MotionTransition>
-                        <MotionTransition delay={1.5} position="top" className="absolute left-1/2 -translate-x-1/2 bottom-8 flex gap-6">
+                        <MotionTransition delay={1.5} position="top" className="absolute left-1/2 -translate-x-1/2 bottom-8 flex gap-60">
                             <button className="p-4 rounded-full cursor-pointer group">
                                 <RiArrowDownDoubleFill size={40} className="group-hover:translate-y-2 duration-500" />
                             </button>

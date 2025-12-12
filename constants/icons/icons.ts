@@ -1,0 +1,10 @@
+export const nextJs = "/skills/nextjs.svg"
+export const mysql = "/skills/mysql.svg"
+export const node = "/skills/node.svg"
+export const react = "/skills/react.svg"
+export const strapi = "/skills/strapi.svg"
+export const tailwind = "/skills/tailwind.svg"
+export const typescript = "/skills/typescript.svg"
+export const supabase = "/skills/supabase.svg"
+export const openai = "/skills/openai.svg"
+

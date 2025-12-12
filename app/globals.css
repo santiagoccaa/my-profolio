@@ -118,3 +118,10 @@ body {
 .cardPolygon:hover .polygon3 {
     transform: rotateY(-15deg);
 }
+
+
+/* Modal */
+
+.animate-fadeIn {
+  animation: fadeIn 0.9s ease-out forwards;
+}

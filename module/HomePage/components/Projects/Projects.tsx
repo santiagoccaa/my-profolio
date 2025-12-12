@@ -1,11 +1,17 @@
+"use client"
+
 import { PageContainer } from "@/components"
 import { PROJECT_GLASSES, PROJECT_TASTENEST, PROJECT_VOYAGGI } from "@/constants/images/images"
+import { taskFlowApi, tasteNest, voyaggi } from "@/constants/projects"
+import { usePorfolioStore } from "@/store/contextPorpofolio"
 import Image from "next/image"
 import { FaXmark } from "react-icons/fa6"
 import { IoArrowBackOutline } from "react-icons/io5"
 
 export const Projects = () => {
-    
+
+    const { setOpenModal, setProject } = usePorfolioStore()
+
     return (
         <div className='py-16 relative min-h-dvh'>
 
@@ -52,7 +58,12 @@ export const Projects = () => {
                                 </div>
                             </div>
                             <div className='absolute bottom-16 left-0 px-4 w-full'>
-                                <button className="absolute text-xl p-1 rounded-full text-black lg:opacity-0 group-hover:opacity-100 bg-white top-3 right-18 -rotate-135 hover:scale-105 hover:shadow-2xl hover:-rotate-205 cursor-pointer duration-300">
+                                <button
+                                    onClick={() => {
+                                        setOpenModal(true);
+                                        setProject(tasteNest)
+                                    }}
+                                    className="absolute text-xl p-1 rounded-full text-black lg:opacity-0 group-hover:opacity-100 bg-white top-3 right-18 -rotate-135 hover:scale-105 hover:shadow-2xl hover:-rotate-205 cursor-pointer duration-300">
                                     <IoArrowBackOutline />
                                 </button>
                                 <h2 className='text-xs uppercase tracking-[0.25em]'>Front end</h2>
@@ -81,7 +92,12 @@ export const Projects = () => {
                                 </div>
                             </div>
                             <div className='absolute bottom-9 left-2 w-full text-right pr-10'>
-                                <button className="absolute text-xl p-1 rounded-full text-black lg:opacity-0 group-hover:opacity-100 bg-white top-3 left-12 -rotate-45 hover:scale-105 hover:shadow-2xl hover:rotate-45 cursor-pointer duration-300">
+                                <button
+                                    onClick={() => {
+                                        setOpenModal(true);
+                                        setProject(voyaggi)
+                                    }}
+                                    className="absolute text-xl p-1 rounded-full text-black lg:opacity-0 group-hover:opacity-100 bg-white top-3 left-12 -rotate-45 hover:scale-105 hover:shadow-2xl hover:rotate-45 cursor-pointer duration-300">
                                     <IoArrowBackOutline />
                                 </button>
                                 <h2 className='text-xs uppercase tracking-[0.25em]'>Full stack</h2>
@@ -110,7 +126,12 @@ export const Projects = () => {
                                 </div>
                             </div>
                             <div className='absolute bottom-16 right-0 overflow-hidden text-right pr-8 w-full'>
-                                <button className="absolute text-xl p-1 rounded-full text-black lg:opacity-0 group-hover:opacity-100 bg-white top-3 left-12 -rotate-45 hover:scale-105 hover:shadow-2xl hover:rotate-45 cursor-pointer duration-300">
+                                <button
+                                    onClick={() => {
+                                        setOpenModal(true);
+                                        setProject(taskFlowApi)
+                                    }}
+                                    className="absolute text-xl p-1 rounded-full text-black lg:opacity-0 group-hover:opacity-100 bg-white top-3 left-12 -rotate-45 hover:scale-105 hover:shadow-2xl hover:rotate-45 cursor-pointer duration-300">
                                     <IoArrowBackOutline />
                                 </button>
                                 <h2 className='text-xs uppercase tracking-[0.25em]'>Back end</h2>
