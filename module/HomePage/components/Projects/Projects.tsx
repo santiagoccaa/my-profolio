@@ -19,15 +19,14 @@ export const Projects = () => {
             <PageContainer>
                 <div className="absolute bottom-20 left-8 border-4 border-primary p-2 rounded-full" />
                 <div className="absolute bottom-40 left-16 bg-primary p-1 rounded-full" />
-
                 <div className="absolute bottom-[40%] right-8 text-primary text-2xl rotate-6" >
                     <FaXmark />
                 </div>
                 {/* title */}
                 <div className='flex justify-between'>
                     <div className='w-fit'>
-                        <h2 className='text-3xl text-primary'>My</h2>
-                        <h2 className='text-3xl text-white w-full text-right pl-8 -mt-1'>Projects</h2>
+                        <h2 className='text-3xl text-primary font-bold'>My</h2>
+                        <h2 className='text-3xl text-white w-full text-right pl-8 -mt-1 font-bold'>Projects</h2>
                     </div>
                     <div className='flex gap-2 items-center w-full justify-end'>
                         <span className='w-1/2 h-px bg-white' />

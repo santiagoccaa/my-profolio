@@ -1,5 +1,5 @@
-import { Modal } from '@/components'
-import { About, Hero, Projects } from './components'
+import { Modal, PageContainer } from '@/components'
+import { About, Contact, Footer, Hero, Projects, Tools } from './components'
 import Skills from './components/Skills/Skills'
 
 export function HomePage() {
@@ -9,7 +9,14 @@ export function HomePage() {
             <Hero />
             <Projects />
             <About />
-            <Skills />
+            <PageContainer >
+                <Skills />
+            </PageContainer>
+            <Tools />
+            <PageContainer>
+                <Contact />
+            </PageContainer>
+            <Footer />
         </>
     )
 }
