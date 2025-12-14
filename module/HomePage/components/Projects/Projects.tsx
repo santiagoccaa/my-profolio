@@ -1,6 +1,6 @@
 "use client"
 
-import { PageContainer } from "@/components"
+import { PageContainer, TitleSection } from "@/components"
 import { PROJECT_GLASSES, PROJECT_TASTENEST, PROJECT_VOYAGGI } from "@/constants/images/images"
 import { taskFlowApi, tasteNest, voyaggi } from "@/constants/projects"
 import { usePorfolioStore } from "@/store/contextPorpofolio"
@@ -31,7 +31,7 @@ export const Projects = () => {
                     </div>
                     <div className='flex gap-2 items-center w-full justify-end'>
                         <span className='w-1/2 h-px bg-white' />
-                        <h2 className='text-sm uppercase tracking-[0.5em]'>Projects</h2>
+                        <TitleSection text="Projects" reverse />
                     </div>
                 </div>
                 {/* cards projects */}

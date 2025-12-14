@@ -7,4 +7,7 @@ export const tailwind = "/skills/tailwind.svg"
 export const typescript = "/skills/typescript.svg"
 export const supabase = "/skills/supabase.svg"
 export const openai = "/skills/openai.svg"
+export const FIGMA = "/skills/figma_logo.svg"
+export const GITHUB = "/skills/github_logo.svg"
+export const N8N = "/skills/n8n.svg"
 
