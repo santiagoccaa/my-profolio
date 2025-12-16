@@ -24,7 +24,7 @@ export const Contact = () => {
       <div className='flex justify-between'>
         <div className='flex gap-2 items-center w-full justify-end'>
           <span className='w-1/2 h-px bg-white' />
-          <TitleSection text="Contact" reverse />
+          <TitleSection text="Contact" reverse position="right" />
         </div>
       </div>
       <div className="flex flex-col md:flex-row mt-4">

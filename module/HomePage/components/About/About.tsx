@@ -11,7 +11,7 @@ export const About = () => {
                 <div className='flex justify-between'>
                     <div className='flex gap-2 items-center w-full justify-end'>
                         <span className='w-1/2 h-px bg-white' />
-                        <TitleSection text="About me" reverse />
+                        <TitleSection text="About me" reverse position="right" />
                     </div>
                 </div>
                 <div className="flex flex-col-reverse md:flex-row py-16 md:gap-x-4 lg:gap-x-20 gap-y-8 items-center justify-center">

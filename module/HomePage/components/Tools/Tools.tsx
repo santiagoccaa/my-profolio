@@ -43,7 +43,7 @@ export const Tools = () => {
         <section className="my-16">
             <PageContainer>
                 <div className="flex justify-center mb-8">
-                    <TitleSection text="Conocimientos" />
+                    <TitleSection text="Conocimientos" position="top" />
                 </div>
 
                 <div className="relative px-10 lg:px-20">

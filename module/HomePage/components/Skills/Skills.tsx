@@ -28,7 +28,7 @@ export default function Skills() {
       <div className='flex justify-between'>
         <div className='flex gap-2 items-center w-full justify-end'>
           <span className='w-1/2 h-px bg-white' />
-          <TitleSection text="Other Skills" reverse />
+          <TitleSection text="Other Skills" reverse position="right" />
         </div>
       </div>
       <div className="flex justify-center items-center mt-8">

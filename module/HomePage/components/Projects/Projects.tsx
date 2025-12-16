@@ -64,7 +64,7 @@ export const Projects = () => {
                 <div className='flex justify-between'>
                     <div className='flex gap-2 items-center w-full justify-end'>
                         <span className='w-1/2 h-px bg-white' />
-                        <TitleSection text="Projects" reverse />
+                        <TitleSection text="Projects" reverse position="right" />
                     </div>
                 </div>
                 {/* cards projects */}
@@ -93,8 +93,7 @@ export const Projects = () => {
 
                                     {/* Overlay */}
                                     <div
-                                        className={`h-full lg:h-0 w-full absolute bottom-0 left-0
-              group-hover:${item.cardHeight} duration-300 overflow-hidden z-50`}
+                                        className={`h-full lg:h-0 w-full absolute bottom-0 left-0 group-hover:${item.cardHeight} duration-300 overflow-hidden z-50`}
                                     >
                                         <div className="absolute bottom-0 w-full h-96 bg-black p-4 px-8">
                                             <p className="text-md font-light text-white">
@@ -125,11 +124,7 @@ export const Projects = () => {
                                             setOpenModal(true)
                                             setProject(item.project)
                                         }}
-                                        className={`absolute text-xl p-1 rounded-full text-black
-              lg:opacity-0 group-hover:opacity-100 bg-white
-              top-3 ${item.align === 'right' ? 'left-12' : 'right-18'
-                                            }
-              hover:shadow-2xl cursor-pointer duration-300`}
+                                        className={`absolute text-xl p-1 rounded-full text-black lg:opacity-0 group-hover:opacity-100 bg-white top-3 ${item.align === 'right' ? 'left-12' : 'right-18'} hover:shadow-2xl cursor-pointer duration-300`}
                                     >
                                         <HiArrowsPointingOut />
                                     </button>

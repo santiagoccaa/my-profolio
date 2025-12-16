@@ -44,7 +44,7 @@ export const Services = () => {
 
         <div className='flex gap-2 items-center w-full justify-end'>
           <span className='w-1/2 h-px bg-white' />
-          <TitleSection text="Services" reverse />
+          <TitleSection text="Services" reverse position="right" />
         </div>
       </div>
 

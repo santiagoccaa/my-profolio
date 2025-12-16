@@ -44,7 +44,7 @@ export const Modal = () => {
                         <div className="flex h-full relative">
                             <button
                                 onClick={() => setOpenModal(false)}
-                                className="absolute top-4 right-4 text-3xl cursor-pointer hover:-rotate-180 duration-300 text-black"
+                                className="absolute top-4 right-4 text-3xl cursor-pointer hover:rotate-180 duration-300 text-black rounded-full"
                             >
                                 <IoClose />
                             </button>
