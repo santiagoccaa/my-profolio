@@ -5,6 +5,7 @@ import { NavBar } from "@/components";
 
 const fredoka = Saira({
   variable: "--font-geist-sans",
+  weight:['300', '500', '600', '800'],
   subsets: ["latin"],
 });
 

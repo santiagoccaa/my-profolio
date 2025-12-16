@@ -1,10 +1,12 @@
-import { PROJECT_GLASSES, PROJECT_TASTENEST, PROJECT_VOYAGGI } from "../images/images"
+import { EXPRESS, MONGODB, nextJs, react } from "../icons/icons"
+import { MODAL_VOYAGGI, PROJECT_GLASSES, PROJECT_TASTENEST } from "../images/images"
 import { LINK_GLASSES, LINK_TASTENEST, LINK_VOYAGGI } from "../images/links"
 
 export interface ProjectPorfolio {
     image: string,
     name: string
     description: string
+    description2?: string
     tecnologis: string[]
     link: string
 }
@@ -19,10 +21,11 @@ export const tasteNest: ProjectPorfolio = {
 
 
 export const voyaggi: ProjectPorfolio = {
-    image: PROJECT_VOYAGGI,
+    image: MODAL_VOYAGGI,
     name: "Voyaggi",
-    description: "Voyaggi es un planificador de viajes que utiliza inteligencia artificial para recomendar a los usuarios diferentes destinos a visitar y actividades de la ciudad a la que quieran ir con un coste aproximado, aunque no solo eso tambien puedes ajustar diferentes detalles como son hotel, transporte, preferencias, tours y mucho mas, ofrece una interfaz interactiva para que puedas modificar las actividades en el orden que desees y mucho mucho mas. Fue desarrollado diferentes tecnologias como:",
-    tecnologis: ["nextJs", "React", "express", "mongodb"],
+    description: "Voyaggi es un planificador de viajes que utiliza inteligencia artificial para recomendar a los usuarios diferentes destinos a visitar y actividades de la ciudad a la que quieran ir con un coste aproximado.",
+    description2: "aunque no solo eso tambien puedes ajustar diferentes detalles como son hotel, transporte, preferencias, tours y mucho mas, ofrece una interfaz interactiva para que puedas modificar las actividades en el orden que desees y mucho mucho mas.",
+    tecnologis: [nextJs, react, EXPRESS, MONGODB],
     link: LINK_VOYAGGI
 }
 

@@ -53,7 +53,7 @@ export const Services = () => {
           {services.map((service) => (
             <div
               key={service.title}
-              className="w-72 h-86 relative rounded-sm bg-black-secondary flex flex-col shadow-md hover:shadow-primary hover:scale-105 duration-300"
+              className="w-full max-w-80 md:w-72 h-86 relative rounded-sm bg-black-secondary flex flex-col shadow-md hover:shadow-primary hover:scale-105 duration-300"
             >
               <div className="w-28 h-28 rounded-full bg-black p-2 absolute -top-16 left-1/2 -translate-x-1/2">
                 <div className="w-full h-full relative rounded-full bg-black-light">

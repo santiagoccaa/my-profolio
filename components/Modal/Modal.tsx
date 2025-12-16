@@ -1,17 +1,19 @@
 "use client"
 
-import { IoClose } from "react-icons/io5"
+import { IoClose, IoLinkSharp } from "react-icons/io5"
 import { motion, AnimatePresence } from "framer-motion"
 import { usePorfolioStore } from "@/store/contextPorpofolio"
 import Image from "next/image"
-import { LuLink } from "react-icons/lu"
+import { useBlockScroll } from "@/hooks"
+
 
 export const Modal = () => {
     const { openModal, setOpenModal, project } = usePorfolioStore()
 
+    useBlockScroll(openModal);
     if (!project) return
 
-    const { description, image, link, name, tecnologis } = project
+    const { description, description2, image, link, name, tecnologis } = project
 
     return (
         <AnimatePresence>
@@ -25,6 +27,20 @@ export const Modal = () => {
                     className="fixed inset-0 bg-black/40 backdrop-blur-xs flex items-center justify-center z-50"
                     onClick={() => setOpenModal(false)}
                 >
+                    <div className="absolute left-8 inset-0 pointer-events-none">
+                        {/* IZQUIERDA */}
+                        <div className="absolute left-0 top-0 h-full w-32">
+                            <div className="border-2 border-primary w-5 h-5 rounded-full absolute top-[58%] left-6" />
+                            <div className="border-2 border-primary w-2 h-2 absolute top-[75%] left-14" />
+                            <div className="bg-primary w-4 h-4 absolute rotate-45 top-[88%] left-10" />
+                        </div>
+                        {/* DERECHA */}
+                        <div className="absolute right-8 top-0 h-full w-32">
+                            <div className="border-2 border-primary w-4 h-4 absolute top-[12%] right-10" />
+                            <div className="bg-primary w-3 h-3 rounded-full absolute top-[42%] right-14" />
+                            <div className="border-2 border-primary w-2 h-2 rotate-45 absolute top-[28%] right-8" />
+                        </div>
+                    </div>
                     {/* Modal content container */}
                     <motion.div
                         key="modal-content"
@@ -32,16 +48,12 @@ export const Modal = () => {
                         animate={{ scale: 1, opacity: 1, y: 0 }}
                         exit={{ scale: 0.9, opacity: 0, y: 20 }}
                         transition={{ duration: 0.25 }}
-                        className="bg-primary rounded-sm relative max-w-4xl h-[90dvh] w-full shadow-xl overflow-hidden"
+                        className="bg-white rounded-sm relative max-w-4xl h-[90dvh] 2xl:h-[80dvh] w-full shadow-xl overflow-hidden"
                         onClick={(e) => e.stopPropagation()} // evitar cerrar al hacer click dentro
                     >
-                        <div className="absolute h-full w-full">
-                            <div className="h-1/2 w-full bg-primary" />
-                            <div className="h-1/2 w-full bg-white" />
-                        </div>
-                        {/* Close Button */}
                         {/* Modal Content */}
-                        <div className="flex h-full relative">
+                        <div className="flex flex-col md:flex-row h-full relative gap-8">
+                            {/* Close Button */}
                             <button
                                 onClick={() => setOpenModal(false)}
                                 className="absolute top-4 right-4 text-3xl cursor-pointer hover:rotate-180 duration-300 text-black rounded-full"
@@ -49,32 +61,40 @@ export const Modal = () => {
                                 <IoClose />
                             </button>
 
-                            <div className="w-full md:w-1/2 h-full flex">
-                                <div className="p-6 bg-primary rounded-r-[4rem]">
-                                    <Image src={image} width={800} height={800} alt={name} className="h-full" />
+                            <div className="w-2/6 h-full hidden md:flex">
+                                <div className="p-6 bg-primary shadow-lg shadow-black-light rounded-r-[4rem] drop-shadow-2xl" >
+                                    {/* Image */}
+                                    <Image src={image} width={800} height={800} alt={name} className="h-full max-h-[450px] -rotate-6" style={{ filter: 'drop-shadow(1px 10px 10px #1C1C1C)' }} />
                                 </div>
                             </div>
-                            <div className="w-full md:w-1/2">
-                                <div className="rounded-l-[4rem] bg-white h-full flex flex-col gap-y-4 p-6">
-                                    <h2 className="text-black text-3xl font-bold">
+                            <div className="w-full md:w-4/6 h-full">
+                                <div className="h-full flex flex-col gap-y-4 p-6">
+                                    <h2 className="text-black text-4xl font-extrabold">
                                         {project.name}
+                                        <div className="w-20 h-1 bg-primary block mt-2" />
                                     </h2>
-                                    <p className="text-black text-sm font-light text-justify">{description}</p>
+                                    {/* Description */}
                                     <div>
-                                        {tecnologis.map((i, index) => (
-                                            <span key={index} className="text-black">
-                                                {i}
-                                            </span>
-                                        ))}
+                                        <p className="text-black-secondary font-extralight text-lg md:text-sm mt-8">{description}</p>
+                                        <p className="text-black-secondary font-extralight text-lg md:text-sm mt-2">{description2}</p>
+                                    </div>
+                                    <div className="mt-8">
+                                        {/* Tecnologies */}
+                                        <h2 className="text-sm font-medium uppercase text-black-light">Developed with</h2>
+                                        <div className="flex gap-4 mt-4">
+                                            {tecnologis.map((i, index) => (
+                                                <Image key={index} src={i} width={200} height={200} alt="logo" className="w-10 h-10" />
+                                            ))}
+                                        </div>
                                     </div>
 
                                     <div className="w-full flex flex-1 justify-end items-end">
-
-                                        <div className="rounded-sm border-2 border-primary w-full h-12 relative overflow-hidden pl-4 flex justify-between items-center">
-                                            <div className="w-full h-full bg-primary absolute top-0 left-0 opacity-20" />
+                                        <div className="rounded-sm w-full p-2 h-14 relative overflow-hidden flex justify-between items-center">
+                                            {/* Button redirect */}
+                                            <div className="w-full h-full bg-primary absolute top-0 left-0 opacity-10" />
                                             <span className="text-primary font-bold text-md">{link}</span>
-                                            <a href={link} rel="noopener noreferrer" target="_blank" className="w-14 flex justify-center items-center text-2xl h-full bg-primary cursor-pointer relative">
-                                                <LuLink />
+                                            <a href={link} rel="noopener noreferrer" target="_blank" className="w-10 h-10 flex justify-center items-center text-2xl rounded-sm bg-primary cursor-pointer relative ml-8 shadow hover:scale-110 duration-300 font-extralight">
+                                                <IoLinkSharp />
                                             </a>
                                         </div>
                                     </div>
