@@ -6,7 +6,7 @@ import { taskFlowApi, tasteNest, voyaggi } from "@/constants/projects"
 import { usePorfolioStore } from "@/store/contextPorpofolio"
 import Image from "next/image"
 import { FaXmark } from "react-icons/fa6"
-import { IoArrowBackOutline } from "react-icons/io5"
+import { HiArrowsPointingOut } from "react-icons/hi2"
 
 export const Projects = () => {
 
@@ -63,7 +63,7 @@ export const Projects = () => {
                                         setProject(tasteNest)
                                     }}
                                     className="absolute text-xl p-1 rounded-full text-black lg:opacity-0 group-hover:opacity-100 bg-white top-3 right-18 -rotate-135 hover:scale-105 hover:shadow-2xl hover:-rotate-205 cursor-pointer duration-300">
-                                    <IoArrowBackOutline />
+                                    <HiArrowsPointingOut />
                                 </button>
                                 <h2 className='text-xs uppercase tracking-[0.25em]'>Front end</h2>
                                 <h2 className='text-2xl font-medium'>Taste Nest</h2>
@@ -97,7 +97,7 @@ export const Projects = () => {
                                         setProject(voyaggi)
                                     }}
                                     className="absolute text-xl p-1 rounded-full text-black lg:opacity-0 group-hover:opacity-100 bg-white top-3 left-12 -rotate-45 hover:scale-105 hover:shadow-2xl hover:rotate-45 cursor-pointer duration-300">
-                                    <IoArrowBackOutline />
+                                    <HiArrowsPointingOut  />
                                 </button>
                                 <h2 className='text-xs uppercase tracking-[0.25em]'>Full stack</h2>
                                 <h2 className='text-2xl font-medium'>Voyaggi</h2>
@@ -131,7 +131,7 @@ export const Projects = () => {
                                         setProject(taskFlowApi)
                                     }}
                                     className="absolute text-xl p-1 rounded-full text-black lg:opacity-0 group-hover:opacity-100 bg-white top-3 left-12 -rotate-45 hover:scale-105 hover:shadow-2xl hover:rotate-45 cursor-pointer duration-300">
-                                    <IoArrowBackOutline />
+                                    <HiArrowsPointingOut  />
                                 </button>
                                 <h2 className='text-xs uppercase tracking-[0.25em]'>Back end</h2>
                                 <h2 className='text-2xl font-medium'>TaskFlow API</h2>

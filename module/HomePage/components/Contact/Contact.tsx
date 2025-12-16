@@ -32,13 +32,13 @@ export const Contact = () => {
         </div>
       </div>
       <div className="flex flex-col md:flex-row mt-4">
-        <div className="w-1/2">
+        <div className="w-full md:w-1/2">
           <div className="w-72">
             <div className="mt-16 space-y-8">
               {
                 contacts.map(({ text, icon: Icon }, index) => (
                   <div key={index} className="flex gap-8 items-center">
-                    <button className="p-3 bg-primary rounded-full cursor-pointer active:scale-90 duration-300 hover:shadow-lg shadow-primary">
+                    <button className="p-3 bg-linear-to-bl from-primary to-secondary rounded-full cursor-pointer active:scale-90 duration-300 hover:shadow-lg shadow-primary">
                       <Icon size={30} />
                     </button>
                     <span className="text-md font-medium">{text}</span>
@@ -48,7 +48,7 @@ export const Contact = () => {
             </div>
           </div>
         </div>
-        <div className="w-1/2">
+        <div className="w-full md:w-1/2">
           <form action="" className="flex flex-col gap-4 max-w-96 text-center">
             <h2 className="text-xl font-medium">Send Message</h2>
             <input type="email" placeholder="email@explame.com" autoComplete="off" className="p-2 bg-white text-black font-medium text-md rounded-sm" />

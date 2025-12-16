@@ -6,7 +6,7 @@ export const Footer = () => {
   return (
     <footer className="py-8 bg-primary text-white">
       <PageContainer>
-        <div className="flex justify-between w-full text-sm">
+        <div className="flex flex-col md:flex-row items-center gap-y-4 justify-between w-full text-sm">
           <span>
             © {year} Santiago Contreras Arrieta
           </span>

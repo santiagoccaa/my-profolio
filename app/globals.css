@@ -1,20 +1,24 @@
 @import "tailwindcss";
 
 :root {
-    --black    : #0a0a0a;
-    --primary  : #667eea;
+    --black: #0a0a0a;
+    --primary: #667eea;
     --secondary: #764ba2;
+    --black-secondary: #1C1C1C;
+    --black-light: #292929;
 }
 
 @theme inline {
-    --color-black    : var(--black);
-    --color-primary  : var(--primary);
+    --color-black: var(--black);
+    --color-primary: var(--primary);
     --color-secondary: var(--secondary);
+    --color-black-secondary: var(--black-secondary);
+    --color-black-light: var(--black-light)
 }
 
 body {
     background: var(--black);
-    color     : white;
+    color: white;
 }
 
 .gradienImage {
@@ -24,43 +28,43 @@ body {
 
 /* Partículas */
 .particle {
-    position     : absolute;
-    width        : 8px;
-    height       : 8px;
-    background   : var(--primary);
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: var(--primary);
     border-radius: 50%;
-    opacity      : 0.8;
-    animation    : floatUp 8s linear infinite, blink 2s ease-in-out infinite;
+    opacity: 0.8;
+    animation: floatUp 8s linear infinite, blink 2s ease-in-out infinite;
 }
 
 /* Posiciones iniciales de cada partícula */
 .particle:nth-child(1) {
-    left              : 20%;
-    bottom            : -10px;
+    left: 20%;
+    bottom: -10px;
     animation-duration: 9s;
 }
 
 .particle:nth-child(2) {
-    left              : 40%;
-    bottom            : -10px;
+    left: 40%;
+    bottom: -10px;
     animation-duration: 7s;
 }
 
 .particle:nth-child(3) {
-    left              : 60%;
-    bottom            : -10px;
+    left: 60%;
+    bottom: -10px;
     animation-duration: 10s;
 }
 
 .particle:nth-child(4) {
-    left              : 75%;
-    bottom            : -10px;
+    left: 75%;
+    bottom: -10px;
     animation-duration: 8s;
 }
 
 .particle:nth-child(5) {
-    left              : 30%;
-    bottom            : -10px;
+    left: 30%;
+    bottom: -10px;
     animation-duration: 11s;
 }
 
@@ -68,12 +72,12 @@ body {
 @keyframes floatUp {
     0% {
         transform: translateY(0) scale(1);
-        opacity  : 0.6;
+        opacity: 0.6;
     }
 
     100% {
         transform: translateY(-120vh) scale(1.6);
-        opacity  : 0;
+        opacity: 0;
     }
 }
 

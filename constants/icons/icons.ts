@@ -14,6 +14,9 @@ export const EXPRESS = "/skills/express.svg"
 export const HTML5 = "/skills/HTML5.svg"
 export const GIT = "/skills/Git.svg"
 
+export const STYLE = "/services/style.svg"
+export const AUTOMATIZACION = "/services/auto.svg"
+export const BACKEND = "/services/back.svg"
 
 
 
