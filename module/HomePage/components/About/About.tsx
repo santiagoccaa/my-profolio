@@ -17,9 +17,9 @@ export const About = () => {
                 <div className="flex flex-col-reverse md:flex-row py-16 md:gap-x-4 lg:gap-x-20 gap-y-8 items-center justify-center">
                     <div className="relative w-full flex justify-center items-center">
                         <div className="w-full h-72 rounded-xl bg-red-500 sm:bg-green-500 md:bg-sky-500 lg:bg-secondary relative">
-                            <div className="absolute bottom-0 left-0 bg-black rounded-tr-4xl pt-2 pr-2">
-                                <button className="w-42 h-14 bg-primary rounded-full shadow-2xl flex items-center justify-center text-sm font-light gap-2">
-                                    Dowload CV <LuDownload size={20} />
+                            <div className="absolute bottom-0 left-0 bg-black rounded-tr-sm pt-2 pr-2 w-1/2">
+                                <button className="w-full h-14 bg-primary rounded-sm shadow-2xl flex items-center justify-center text-md font-medium gap-2 cursor-pointer group">
+                                    Dowload CV <LuDownload size={20} className="group-hover:translate-y-0.5 duration-300" />
                                 </button>
                             </div>
                         </div>

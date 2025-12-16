@@ -57,9 +57,9 @@ export const Hero = () => {
                             }
                         </MotionTransition>
                         <MotionTransition delay={1.5} position="top" className="absolute left-1/2 -translate-x-1/2 bottom-8 flex gap-60">
-                            <button className="p-4 rounded-full cursor-pointer group">
+                            <div className="p-4 rounded-full group">
                                 <RiArrowDownDoubleFill size={40} className="group-hover:translate-y-2 duration-500" />
-                            </button>
+                            </div>
                         </MotionTransition>
                     </div>
                 </div>

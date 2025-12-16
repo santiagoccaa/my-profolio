@@ -23,6 +23,10 @@ export const MotionTransition = ({ children, position, className, duration = 1.4
   return (
     <motion.div
       initial={initialPos}
+      viewport={{
+        once: true,
+        amount: 0.3, // 👈 cuando el 30% entra en pantalla
+      }}
 
       animate={{
         opacity: 1,
@@ -72,6 +76,10 @@ export const AnimatedText = ({ text, className, delay = 0 }: AnimatedTextProps) 
       variants={container}
       initial="hidden"
       animate="visible"
+      viewport={{
+        once: true,
+        amount: 0.3, // 👈 cuando el 30% entra en pantalla
+      }}
     >
       {letters.map((letter, index) => (
         <motion.span key={index} variants={child}>
