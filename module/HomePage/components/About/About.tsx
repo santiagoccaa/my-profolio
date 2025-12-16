@@ -10,8 +10,8 @@ export const About = () => {
             <PageContainer>
                 <div className='flex justify-between'>
                     <div>
-                        <h2 className='text-3xl text-primary font-bold'>My</h2>
-                        <h2 className='text-3xl text-white pl-8 -mt-1 font-bold'>Information</h2>
+                        <h2 className='text-3xl text-primary font-bold'>Profile</h2>
+                        <h2 className='text-3xl text-white pl-8 -mt-1 font-bold'>Details</h2>
                     </div>
                     <div className='flex gap-2 items-center w-full justify-end'>
                         <span className='w-1/2 h-px bg-white' />

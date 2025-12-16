@@ -1,37 +1,79 @@
+'use client'
+import { useRef } from "react"
 import { PageContainer, TitleSection } from "@/components"
-import { FIGMA, GITHUB, mysql, N8N, nextJs, node, react, strapi, supabase, tailwind, typescript } from "@/constants/icons/icons"
-import Image from "next/image"
+import {
+    EXPRESS,
+    FIGMA, GIT, GITHUB, HTML5, mysql, N8N, nextJs, node,
+    react, strapi, supabase, tailwind, typescript
+} from "@/constants/icons/icons"
+import Tool from "./Tool"
+import { TiArrowLeftThick, TiArrowRightThick } from "react-icons/ti"
+
+const tools = [
+    { image: nextJs, text: "Next.js", alt: "Next.js logo", className: "bg-white rounded-full" },
+    { image: mysql, text: "MySQL", alt: "MySQL logo" },
+    { image: node, text: "Node.js", alt: "Node.js logo" },
+    { image: react, text: "React", alt: "React logo" },
+    { image: strapi, text: "Strapi", alt: "Strapi logo" },
+    { image: tailwind, text: "Tailwind", alt: "Tailwind logo" },
+    { image: supabase, text: "Supabase", alt: "Supabase logo" },
+    { image: FIGMA, text: "Figma", alt: "Figma logo" },
+    { image: GITHUB, text: "GitHub", alt: "GitHub logo" },
+    { image: N8N, text: "n8n", alt: "n8n logo" },
+    { image: EXPRESS, text: "Express", alt: "express logo", className: "bg-white rounded-full" },
+    { image: typescript, text: "TypeScript", alt: "TypeScript logo" },
+    { image: HTML5, text: "HTML5", alt: "HTML5 logo" },
+    { image: GIT, text: "Git", alt: "Git logo" },
+]
 
 export const Tools = () => {
+    const carouselRef = useRef<HTMLDivElement>(null)
+
+    const scroll = (direction: 'left' | 'right') => {
+        if (!carouselRef.current) return
+
+        const width = carouselRef.current.clientWidth
+        carouselRef.current.scrollBy({
+            left: direction === 'left' ? -width : width,
+            behavior: 'smooth'
+        })
+    }
+
     return (
-        <div className="flex items-center w-full my-16">
+        <section className="my-16">
             <PageContainer>
-                <div className="flex w-full justify-center mb-8">
-                    <TitleSection text="Mi conocimientos" />
+                <div className="flex justify-center mb-8">
+                    <TitleSection text="Conocimientos" />
                 </div>
-                <div className="flex h-44 items-center w-full justify-between gap-8 overflow-x-auto bg-red-400">
-                    <Image src={nextJs} width={200} height={200} alt="logo nextjs" className="w-12 h-12 bg-white rounded-full" />
-                    <div className="relative group">
-                        <div className="relative">
-                            <div className="absolute bottom-[120%] left-1/2 -translate-x-1/2 bg-black px-2 rounded-sm z-20">
-                                MySql
-                            </div>
-                            <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 h-4 w-4 bg-black rotate-45 z-10" />
-                        </div>
-                        <Image src={mysql} width={200} height={200} alt="logo nextjs" className="w-12 h-12" />
+
+                <div className="relative px-10 lg:px-20">
+                    {/* Botón izquierda */}
+                    <button
+                        onClick={() => scroll('left')}
+                        className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-8 h-8 flex items-center justify-center  bg-primary rounded-full cursor-pointer active:scale-95 duration-300 group"
+                    >
+                        <TiArrowLeftThick size={25} className="text-white group-hover:-translate-x-1 duration-300" />
+                    </button>
+
+                    {/* Carousel */}
+                    <div
+                        ref={carouselRef}
+                        className="flex justify-between h-32 gap-4 items-center overflow-x-scroll scroll-smooth snap-x snap-mandatory [&::-webkit-scrollbar]:hidden"
+                    >
+                        {tools.map((tool, i) => (
+                            <Tool key={i} {...tool} />
+                        ))}
                     </div>
-                    <Image src={node} width={200} height={200} alt="logo nextjs" className="w-12 h-12" />
-                    <Image src={react} width={200} height={200} alt="logo nextjs" className="w-12 h-12" />
-                    <Image src={strapi} width={200} height={200} alt="logo nextjs" className="w-12 h-12" />
-                    <Image src={tailwind} width={200} height={200} alt="logo nextjs" className="w-12 h-12" />
-                    <Image src={typescript} width={200} height={200} alt="logo nextjs" className="w-12 h-12" />
-                    <Image src={supabase} width={200} height={200} alt="logo nextjs" className="w-12 h-12" />
-                    <Image src={FIGMA} width={200} height={200} alt="logo nextjs" className="w-14 h-14" />
-                    <Image src={GITHUB} width={200} height={200} alt="logo nextjs" className="w-12 h-12" />
-                    <Image src={N8N} width={200} height={200} alt="logo nextjs" className="w-12 h-12" />
+
+                    {/* Botón derecha */}
+                    <button
+                        onClick={() => scroll('right')}
+                        className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-primary w-8 h-8 flex items-center justify-center rounded-full cursor-pointer active:scale-95 duration-300 group"
+                    >
+                        <TiArrowRightThick className="text-white group-hover:translate-x-1 duration-300" size={25} />
+                    </button>
                 </div>
             </PageContainer>
-        </div>
+        </section>
     )
 }
-

@@ -10,4 +10,10 @@ export const openai = "/skills/openai.svg"
 export const FIGMA = "/skills/figma_logo.svg"
 export const GITHUB = "/skills/github_logo.svg"
 export const N8N = "/skills/n8n.svg"
+export const EXPRESS = "/skills/express.svg"
+export const HTML5 = "/skills/HTML5.svg"
+export const GIT = "/skills/Git.svg"
+
+
+
 
