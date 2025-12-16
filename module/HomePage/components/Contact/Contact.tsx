@@ -22,10 +22,6 @@ export const Contact = () => {
   return (
     <div className="my-16 py-16">
       <div className='flex justify-between'>
-        <div>
-          <h2 className='text-3xl text-primary font-bold'>Contact</h2>
-          <h2 className='text-3xl text-white pl-22 -mt-1 font-bold'>me</h2>
-        </div>
         <div className='flex gap-2 items-center w-full justify-end'>
           <span className='w-1/2 h-px bg-white' />
           <TitleSection text="Contact" reverse />

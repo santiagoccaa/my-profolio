@@ -26,10 +26,6 @@ export default function Skills() {
     <section className="py-16 mb-16">
       {/* Header */}
       <div className='flex justify-between'>
-        <div>
-          <h2 className='text-3xl text-primary font-bold'>Additional</h2>
-          <h2 className='text-3xl text-white pl-22 -mt-1 font-bold'>Skills</h2>
-        </div>
         <div className='flex gap-2 items-center w-full justify-end'>
           <span className='w-1/2 h-px bg-white' />
           <TitleSection text="Other Skills" reverse />

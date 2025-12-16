@@ -9,10 +9,6 @@ export const About = () => {
             <div className="absolute bottom-32 md:top-1/2 md:-translate-y-1/2 left-0 bg-linear-to-b from-black via-secondary to-black w-full md:w-[30%] h-44 opacity-60" />
             <PageContainer>
                 <div className='flex justify-between'>
-                    <div>
-                        <h2 className='text-3xl text-primary font-bold'>Profile</h2>
-                        <h2 className='text-3xl text-white pl-8 -mt-1 font-bold'>Details</h2>
-                    </div>
                     <div className='flex gap-2 items-center w-full justify-end'>
                         <span className='w-1/2 h-px bg-white' />
                         <TitleSection text="About me" reverse />
