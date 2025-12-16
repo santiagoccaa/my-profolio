@@ -1,6 +1,7 @@
 "use client"
 
 import { PageContainer, TitleSection } from "@/components"
+import { MotionTransition } from "@/components/Transition"
 import { PROJECT_GLASSES, PROJECT_TASTENEST, PROJECT_VOYAGGI } from "@/constants/images/images"
 import { taskFlowApi, tasteNest, voyaggi } from "@/constants/projects"
 import { usePorfolioStore } from "@/store/contextPorpofolio"
@@ -18,8 +19,7 @@ const projectsData = [
         polygonClass: 'polygon1',
         cardHeight: 'h-96',
         align: 'left',
-        description: `Laudantium fugiat eius expedita ex ipsum, deleniti,
-      repellat necessitatibus soluta natus reprehenderit alias.`,
+        position: "left"
     },
     {
         id: 'voyaggi',
@@ -30,7 +30,7 @@ const projectsData = [
         polygonClass: 'polygon2',
         cardHeight: 'h-89',
         align: 'right',
-        description: 'Laudantium fugiat eius expedita ex ipsum, deleniti, repellat necessitatibus soluta natus reprehenderit alias.',
+        position: "top"
     },
     {
         id: 'taskflow',
@@ -40,11 +40,10 @@ const projectsData = [
         project: taskFlowApi,
         polygonClass: 'polygon3',
         cardHeight: 'h-96',
-        align: 'right',
-        description: `Laudantium fugiat eius expedita ex ipsum, deleniti, repellat necessitatibus soluta natus reprehenderit alias.`,
+        align: 'left',
+        position: "right"
     },
-]
-
+] as const
 
 export const Projects = () => {
 
@@ -70,14 +69,14 @@ export const Projects = () => {
                 {/* cards projects */}
                 <div className="flex flex-col lg:flex-row items-center justify-center gap-4 w-full py-8">
                     {projectsData.map((item) => (
-                        <div
+                        <MotionTransition
+                            position={item.position}
                             key={item.id}
                             className={`w-full lg:w-fit flex ${item.align === 'right' ? 'justify-end' : ''
                                 }`}
                         >
                             <div
                                 className={`cardPolygon w-72 ${item.cardHeight} relative group`}
-                                style={{ filter: 'drop-shadow(2px 2px 15px #667eea)' }}
                             >
                                 <div
                                     className={`${item.polygonClass} transition-all duration-700 w-72 ${item.cardHeight} relative group`}
@@ -92,31 +91,14 @@ export const Projects = () => {
                                     </div>
 
                                     {/* Overlay */}
-                                    <div
-                                        className={`h-full lg:h-0 w-full absolute bottom-0 left-0 group-hover:${item.cardHeight} duration-300 overflow-hidden z-50`}
-                                    >
-                                        <div className="absolute bottom-0 w-full h-96 bg-black p-4 px-8">
-                                            <p className="text-md font-light text-white">
-                                                {item.description}
-                                            </p>
-
-                                            <div className="flex gap-2 items-center mt-4">
-                                                {Array.from({ length: 4 }).map((_, i) => (
-                                                    <div
-                                                        key={i}
-                                                        className="w-8 h-8 rounded-full bg-purple-800"
-                                                    />
-                                                ))}
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <div className={`h-full lg:h-0 w-full absolute bottom-0 left-0 group-hover:h-96 duration-300 overflow-hidden z-50 bg-black opacity-60`} />
                                 </div>
 
                                 {/* Footer */}
                                 <div
                                     className={`absolute ${item.align === 'right'
-                                            ? 'bottom-9 right-0 pr-8 text-right'
-                                            : 'bottom-16 left-0 px-4'
+                                        ? 'bottom-9 right-0 pr-8 text-right'
+                                        : 'bottom-16 left-0 px-8'
                                         } w-full`}
                                 >
                                     <button
@@ -124,9 +106,9 @@ export const Projects = () => {
                                             setOpenModal(true)
                                             setProject(item.project)
                                         }}
-                                        className={`absolute text-xl p-1 rounded-full text-black lg:opacity-0 group-hover:opacity-100 bg-white top-3 ${item.align === 'right' ? 'left-12' : 'right-18'} hover:shadow-2xl cursor-pointer duration-300`}
+                                        className={`absolute text-xl p-1 rounded-full text-black lg:opacity-0 group-hover:opacity-100 bg-white top-3 ${item.align === 'right' ? 'left-12' : 'right-18'} hover:shadow-2xl cursor-pointer duration-300 group`}
                                     >
-                                        <HiArrowsPointingOut />
+                                        <HiArrowsPointingOut className="group-hover:scale-105 duration-300" />
                                     </button>
 
                                     <h2 className="text-xs uppercase tracking-[0.25em]">
@@ -135,7 +117,7 @@ export const Projects = () => {
                                     <h2 className="text-2xl font-medium">{item.title}</h2>
                                 </div>
                             </div>
-                        </div>
+                        </MotionTransition>
                     ))}
                 </div>
 

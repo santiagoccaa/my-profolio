@@ -23,7 +23,7 @@ const otherSkills = [
 export default function Skills() {
 
   return (
-    <section className="py-16 mb-16">
+    <section className="mb-16">
       {/* Header */}
       <div className='flex justify-between'>
         <div className='flex gap-2 items-center w-full justify-end'>
@@ -31,7 +31,7 @@ export default function Skills() {
           <TitleSection text="Other Skills" reverse position="right" />
         </div>
       </div>
-      <div className="flex justify-center items-center mt-8">
+      <div className="flex justify-center items-center py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-12">
           {
             otherSkills.map(({ image, description, title }) => (

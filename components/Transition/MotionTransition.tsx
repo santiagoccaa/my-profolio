@@ -3,9 +3,11 @@
 import { motion } from "motion/react"
 import { ReactNode } from "react"
 
+type MotionPosition = "right" | "bottom" | "left" | "top"
+
 interface MotionTransitionProps {
   children: ReactNode
-  position: "right" | "bottom" | 'left' | 'top'
+  position: MotionPosition
   className?: string,
   duration?: number,
   delay?: number
