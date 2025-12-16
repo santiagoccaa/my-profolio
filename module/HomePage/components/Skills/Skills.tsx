@@ -35,7 +35,7 @@ export default function Skills() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-12">
           {
             otherSkills.map(({ image, description, title }) => (
-              <div key={title} className="w-80 h-fit rounded-xl bg-[#1C1C1C] relative hover:rotate-2 duration-300">
+              <div key={title} className="w-full max-w-80 h-fit rounded-xl bg-[#1C1C1C] relative hover:rotate-2 duration-300">
                 <div className="absolute top-4 right-full bg-primary h-16 w-2 rounded-l-full" />
                 <div className="p-4 space-y-2 relative">
                   <div className="bg-[#292929] p-2 rounded-full w-18 h-18 flex justify-center items-center">
