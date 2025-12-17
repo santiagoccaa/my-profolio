@@ -63,7 +63,7 @@ export const Modal = () => {
                             </button>
 
                             <div className="w-2/6 h-full hidden md:flex">
-                                <div className="p-6 bg-primary shadow-lg shadow-black-light rounded-r-[4rem] drop-shadow-2xl" >
+                                <div className="p-6 w-full bg-primary shadow-lg shadow-black-light rounded-r-[4rem] drop-shadow-2xl" >
                                     {/* Image */}
                                     <div className="h-full max-h-[450px] relative">
                                         <Image src={image} fill alt={name} className="-rotate-6 object-cover" style={{ filter: 'drop-shadow(1px 10px 10px #1C1C1C)' }} />

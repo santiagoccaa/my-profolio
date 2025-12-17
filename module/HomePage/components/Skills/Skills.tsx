@@ -39,7 +39,7 @@ export default function Skills() {
                 <div className="absolute top-4 right-full bg-primary h-16 w-2 rounded-l-full" />
                 <div className="p-4 space-y-2 relative">
                   <div className="bg-[#292929] p-2 rounded-full w-18 h-18 flex justify-center items-center">
-                    <div className="w-16 h-16 relative">
+                    <div className="min-w-16 min-h-16 relative rounded-full">
                       <Image src={image} fill alt="figma logo" className="object-cover" />
                     </div>
                   </div>
