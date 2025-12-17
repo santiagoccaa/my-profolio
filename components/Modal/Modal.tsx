@@ -55,6 +55,7 @@ export const Modal = () => {
                         <div className="flex flex-col md:flex-row h-full relative gap-8">
                             {/* Close Button */}
                             <button
+                                aria-label="close"
                                 onClick={() => setOpenModal(false)}
                                 className="absolute top-4 right-4 text-3xl cursor-pointer hover:rotate-180 duration-300 text-black rounded-full"
                             >
@@ -64,7 +65,9 @@ export const Modal = () => {
                             <div className="w-2/6 h-full hidden md:flex">
                                 <div className="p-6 bg-primary shadow-lg shadow-black-light rounded-r-[4rem] drop-shadow-2xl" >
                                     {/* Image */}
-                                    <Image src={image} width={800} height={800} alt={name} className="h-full max-h-[450px] -rotate-6" style={{ filter: 'drop-shadow(1px 10px 10px #1C1C1C)' }} />
+                                    <div className="h-full max-h-[450px] relative">
+                                        <Image src={image} fill alt={name} className="-rotate-6 object-cover" style={{ filter: 'drop-shadow(1px 10px 10px #1C1C1C)' }} />
+                                    </div>
                                 </div>
                             </div>
                             <div className="w-full md:w-4/6 h-full">
@@ -83,7 +86,9 @@ export const Modal = () => {
                                         <h2 className="text-sm font-medium uppercase text-black-light">Developed with</h2>
                                         <div className="flex gap-4 mt-4">
                                             {tecnologis.map((i, index) => (
-                                                <Image key={index} src={i} width={200} height={200} alt="logo" className="w-10 h-10" />
+                                                <div key={index} className="w-10 h-10 relative">
+                                                    <Image src={i} fill alt="logo" className="object-cover" />
+                                                </div>
                                             ))}
                                         </div>
                                     </div>

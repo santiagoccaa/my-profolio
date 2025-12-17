@@ -50,7 +50,7 @@ export const Projects = () => {
     const { setOpenModal, setProject } = usePorfolioStore()
 
     return (
-        <section id="projects" className='py-16 relative'>
+        <section id="projects" className='my-16 relative'>
             <div className="w-full h-20 opacity-50 absolute bottom-0 left-0" />
             <PageContainer>
                 <div className="absolute bottom-20 left-8 border-4 border-primary p-2 rounded-full" />
@@ -85,7 +85,7 @@ export const Projects = () => {
                                             src={item.image}
                                             fill
                                             alt={item.title}
-                                            className="bg-center"
+                                            className="object-cover"
                                         />
                                     </div>
 
@@ -101,6 +101,7 @@ export const Projects = () => {
                                         } w-full`}
                                 >
                                     <button
+                                        aria-label={`open modal project ${item.id}`}
                                         onClick={() => {
                                             setOpenModal(true)
                                             setProject(item.project)

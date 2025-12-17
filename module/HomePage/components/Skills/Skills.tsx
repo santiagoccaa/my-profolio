@@ -23,7 +23,7 @@ const otherSkills = [
 export default function Skills() {
 
   return (
-    <section className="mb-16">
+    <section className="my-16">
       {/* Header */}
       <div className='flex justify-between'>
         <div className='flex gap-2 items-center w-full justify-end'>
@@ -31,7 +31,7 @@ export default function Skills() {
           <TitleSection text="Other Skills" reverse position="right" />
         </div>
       </div>
-      <div className="flex justify-center items-center py-16">
+      <div className="flex justify-center items-center py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-12">
           {
             otherSkills.map(({ image, description, title }) => (
@@ -39,7 +39,9 @@ export default function Skills() {
                 <div className="absolute top-4 right-full bg-primary h-16 w-2 rounded-l-full" />
                 <div className="p-4 space-y-2 relative">
                   <div className="bg-[#292929] p-2 rounded-full w-18 h-18 flex justify-center items-center">
-                    <Image src={image} width={400} height={400} alt="figma logo" className="w-16 h-16" />
+                    <div className="w-16 h-16 relative">
+                      <Image src={image} fill alt="figma logo" className="object-cover" />
+                    </div>
                   </div>
                   <h2 className="text-xl font-bold">{title}</h2>
                   <p className="text-sm">

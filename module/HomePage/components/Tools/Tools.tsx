@@ -46,9 +46,10 @@ export const Tools = () => {
                     <TitleSection text="Conocimientos" position="top" />
                 </div>
 
-                <div className="relative px-10 lg:px-20">
+                <div className="relative px-10 lg:px-20 py-8">
                     {/* Botón izquierda */}
                     <button
+                        aria-label="arrow left"
                         onClick={() => scroll('left')}
                         className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-8 h-8 flex items-center justify-center  bg-primary rounded-full cursor-pointer active:scale-95 duration-300 group"
                     >
@@ -67,6 +68,7 @@ export const Tools = () => {
 
                     {/* Botón derecha */}
                     <button
+                        aria-label="arrow right"
                         onClick={() => scroll('right')}
                         className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-primary w-8 h-8 flex items-center justify-center rounded-full cursor-pointer active:scale-95 duration-300 group"
                     >

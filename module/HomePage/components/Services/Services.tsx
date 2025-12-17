@@ -41,15 +41,14 @@ export const Services = () => {
   return (
     <div className="my-16">
       <div className='flex justify-between'>
-
         <div className='flex gap-2 items-center w-full justify-end'>
           <span className='w-1/2 h-px bg-white' />
           <TitleSection text="Services" reverse position="right" />
         </div>
       </div>
 
-      <div className="flex justify-center items-center py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 gap-y-20 items-center justify-center">
+      <div className="flex justify-center items-center py-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 gap-y-20 items-center justify-center mt-12">
           {services.map((service) => (
             <div
               key={service.title}
@@ -57,7 +56,7 @@ export const Services = () => {
             >
               <div className="w-28 h-28 rounded-full bg-black p-2 absolute -top-16 left-1/2 -translate-x-1/2">
                 <div className="w-full h-full relative rounded-full bg-black-light">
-                  <Image src={service.image} fill alt="logo" />
+                  <Image src={service.image} fill alt="logo" className="object-cover" />
                 </div>
               </div>
 
@@ -76,8 +75,8 @@ export const Services = () => {
                 </ul>
                 <div className="flex-1 flex items-end">
                   <div className="relative mt-8">
-                    <div className="w-28 h-12 absolute left-4 -top-1 border-2 border-primary rounded-xs inset-0" />
-                    <button className="relative w-30 h-10 rounded-xs bg-primary font-bold flex items-center justify-center gap-2 cursor-pointer shadow-2xl active:scale-95 duration-300 text-sm group">
+                    <div className="w-28 h-12 absolute left-4 -top-1 border-2 border-secondary rounded-xs inset-0" />
+                    <button aria-label="Show me" className="relative w-30 h-10 rounded-xs bg-secondary font-bold flex items-center justify-center gap-2 cursor-pointer shadow-2xl active:scale-95 duration-300 text-md group">
                       Show me <FaArrowUpWideShort size={20} />
                     </button>
                   </div>

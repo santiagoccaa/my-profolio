@@ -4,14 +4,14 @@ export const Footer = () => {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="py-8 bg-primary text-white">
+    <footer className="py-8 bg-secondary text-white">
       <PageContainer>
         <div className="flex flex-col md:flex-row items-center gap-y-4 justify-between w-full text-sm">
-          <span>
+          <span className="text-white font-medium text-md">
             © {year} Santiago Contreras Arrieta
           </span>
 
-          <span>
+          <span className="text-white font-medium text-md">
             Todos los derechos reservados
           </span>
         </div>

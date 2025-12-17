@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Saira } from "next/font/google";
 import "./globals.css";
-import { NavBar } from "@/components";
 
 const fredoka = Saira({
   variable: "--font-geist-sans",
@@ -25,11 +24,8 @@ export default function RootLayout({
         suppressHydrationWarning={true}
         className={`${fredoka.className} relative floating`}
       >
-        <NavBar />
         <main className="h-screen">
-
           {children}
-
         </main>
       </body>
     </html>

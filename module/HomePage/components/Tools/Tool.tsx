@@ -16,7 +16,9 @@ const Tool = ({ image, text, alt, className }: ToolProps) => {
                 </div>
                 <div className="absolute -top-6 left-1/2 -translate-x-1/2 h-4 w-4 bg-primary rotate-45 z-10" />
             </div>
-            <Image src={image} width={200} height={200} alt={alt} className={`${className} w-12 h-12`} />
+            <div className="w-12 h-12 relative">
+                <Image src={image} fill alt={alt} className={`${className} object-cover`} />
+            </div>
         </div>
     )
 }

@@ -6,35 +6,38 @@ import { LuLinkedin } from "react-icons/lu"
 const contacts = [
   {
     icon: FaWhatsapp,
-    text: '+57 3167268571'
+    text: '+57 3167268571',
+    arial: 'ir a whatsapp'
   },
   {
     icon: BiLogoGmail,
-    text: 'santiagodev@gmail.com'
+    text: 'santiagodev@gmail.com',
+    arial: 'ir a gmail'
   },
   {
     icon: LuLinkedin,
-    text: 'santiagolinkedin'
+    text: 'santiagolinkedin',
+    arial: 'ir a linkedin'
   }
 ]
 
 export const Contact = () => {
   return (
-    <div className="my-16 py-16">
+    <div className="my-16">
       <div className='flex justify-between'>
         <div className='flex gap-2 items-center w-full justify-end'>
           <span className='w-1/2 h-px bg-white' />
           <TitleSection text="Contact" reverse position="right" />
         </div>
       </div>
-      <div className="flex flex-col md:flex-row mt-4">
+      <div className="flex flex-col md:flex-row mt-4 py-8">
         <div className="w-full md:w-1/2">
           <div className="w-72">
             <div className="mt-16 space-y-8">
               {
-                contacts.map(({ text, icon: Icon }, index) => (
+                contacts.map(({ text, icon: Icon, arial }, index) => (
                   <div key={index} className="flex gap-8 items-center">
-                    <button className="p-3 bg-linear-to-bl from-primary to-secondary rounded-full cursor-pointer active:scale-90 duration-300 hover:shadow-lg shadow-primary">
+                    <button aria-label={arial} className="p-3 bg-linear-to-bl from-primary to-secondary rounded-full cursor-pointer active:scale-90 duration-300 hover:shadow-lg shadow-primary">
                       <Icon size={30} />
                     </button>
                     <span className="text-md font-medium">{text}</span>
@@ -52,8 +55,8 @@ export const Contact = () => {
 
             </textarea>
             <div className="relative mt-8">
-              <div className="w-32 h-14 absolute left-4 -top-1 border-2 border-primary rounded-xs inset-0" />
-              <button className="relative w-34 h-12 rounded-xs bg-primary font-bold flex items-center justify-center gap-2 cursor-pointer shadow-2xl active:scale-95 duration-300 text-sm group">
+              <div className="w-32 h-14 absolute left-4 -top-1 border-2 border-secondary rounded-xs inset-0" />
+              <button aria-label="send message" className="relative w-34 h-12 rounded-xs bg-secondary font-bold flex items-center justify-center gap-2 cursor-pointer shadow-2xl active:scale-95 duration-300 text-md group">
                 Send <BiSend size={20} className="group-hover:translate-x-2 duration-300" />
               </button>
             </div>
