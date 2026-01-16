@@ -3,7 +3,7 @@
 import { motion } from "motion/react"
 import { ReactNode } from "react"
 
-type MotionPosition = "right" | "bottom" | "left" | "top"
+export type MotionPosition = "right" | "bottom" | "left" | "top"
 
 interface MotionTransitionProps {
   children: ReactNode
