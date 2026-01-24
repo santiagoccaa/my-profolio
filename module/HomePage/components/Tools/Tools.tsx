@@ -1,5 +1,3 @@
-'use client'
-import { useRef } from "react"
 import { PageContainer, TitleSection } from "@/components"
 import {
     EXPRESS,
@@ -7,7 +5,6 @@ import {
     react, strapi, supabase, tailwind, typescript
 } from "@/constants/icons/icons"
 import Tool from "./Tool"
-import { TiArrowLeftThick, TiArrowRightThick } from "react-icons/ti"
 
 const tools = [
     { image: nextJs, text: "Next.js", alt: "Next.js logo", className: "bg-white rounded-full" },
@@ -27,53 +24,22 @@ const tools = [
 ]
 
 export const Tools = () => {
-    const carouselRef = useRef<HTMLDivElement>(null)
-
-    const scroll = (direction: 'left' | 'right') => {
-        if (!carouselRef.current) return
-
-        const width = carouselRef.current.clientWidth
-        carouselRef.current.scrollBy({
-            left: direction === 'left' ? -width : width,
-            behavior: 'smooth'
-        })
-    }
 
     return (
-        <section className="my-16">
+        <section className="py-16 bg-[#27282A]">
             <PageContainer>
-                <div className="flex justify-center mb-8">
-                    <TitleSection text="Conocimientos" position="top" />
-                </div>
-
-                <div className="relative px-10 lg:px-20 py-8">
-                    {/* Botón izquierda */}
-                    <button
-                        aria-label="arrow left"
-                        onClick={() => scroll('left')}
-                        className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-8 h-8 flex items-center justify-center  bg-primary rounded-full cursor-pointer active:scale-95 duration-300 group"
-                    >
-                        <TiArrowLeftThick size={25} className="text-white group-hover:-translate-x-1 duration-300" />
-                    </button>
-
-                    {/* Carousel */}
-                    <div
-                        ref={carouselRef}
-                        className="flex justify-between h-32 gap-4 items-center overflow-x-scroll scroll-smooth snap-x snap-mandatory [&::-webkit-scrollbar]:hidden"
-                    >
-                        {tools.map((tool, i) => (
-                            <Tool key={i} {...tool} />
-                        ))}
+                <div className='flex justify-between mb-8'>
+                    <div className='flex gap-2 items-center w-full justify-end'>
+                        <span className='w-1/2 h-px bg-white' />
+                        <TitleSection text="Technologies" position="right" reverse />
                     </div>
-
-                    {/* Botón derecha */}
-                    <button
-                        aria-label="arrow right"
-                        onClick={() => scroll('right')}
-                        className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-primary w-8 h-8 flex items-center justify-center rounded-full cursor-pointer active:scale-95 duration-300 group"
-                    >
-                        <TiArrowRightThick className="text-white group-hover:translate-x-1 duration-300" size={25} />
-                    </button>
+                </div>
+                <div
+                    className="grid grid-cols-7 gap-4 gap-y-12"
+                >
+                    {tools.map((tool, i) => (
+                        <Tool key={i} {...tool} />
+                    ))}
                 </div>
             </PageContainer>
         </section>

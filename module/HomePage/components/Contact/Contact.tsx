@@ -23,14 +23,14 @@ const contacts = [
 
 export const Contact = () => {
   return (
-    <div className="my-16">
+    <div className="py-16">
       <div className='flex justify-between'>
-        <div className='flex gap-2 items-center w-full justify-end'>
+        <div className='flex gap-2 items-center w-full justify-start mb-8'>
+          <TitleSection text="Contact" position="left" />
           <span className='w-1/2 h-px bg-white' />
-          <TitleSection text="Contact" reverse position="right" />
         </div>
       </div>
-      <div className="flex flex-col md:flex-row mt-4 py-8">
+      <div className="flex flex-col md:flex-row mt-4">
         <div className="w-full md:w-1/2">
           <div className="w-72">
             <div className="mt-16 space-y-8">

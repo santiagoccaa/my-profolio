@@ -57,7 +57,7 @@ export const Projects = () => {
 
 
     return (
-        <section id="projects" className='my-16 relative'>
+        <section id="projects" className='py-16 relative bg-[#27282A] '>
             <div className="w-full h-20 opacity-50 absolute bottom-0 left-0" />
             <PageContainer>
                 <div className="absolute bottom-20 left-8 border-4 border-primary p-2 rounded-full" />
@@ -67,7 +67,7 @@ export const Projects = () => {
                 </div>
 
                 {/* Title */}
-                <div className='flex justify-between'>
+                <div className='flex justify-between mb-8'>
                     <div className='flex gap-2 items-center w-full justify-end'>
                         <span className='w-1/2 h-px bg-white' />
                         <TitleSection text="Projects" reverse position="right" />
@@ -75,7 +75,7 @@ export const Projects = () => {
                 </div>
 
                 {/* Cards projects */}
-                <div className="flex flex-col lg:flex-row items-center justify-center gap-4 w-full py-8">
+                <div className="flex flex-col lg:flex-row items-center justify-center gap-4 w-full">
                     {projectsData.map((project) => (
                         <CardProject key={project.id} {...project} />
                     ))}

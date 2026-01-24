@@ -5,16 +5,16 @@ import { MdArrowForward } from "react-icons/md"
 
 export const About = () => {
     return (
-        <div className="relative my-16">
-            <div className="absolute bottom-32 md:top-1/2 md:-translate-y-1/2 left-0 bg-linear-to-b from-black via-secondary to-black w-full md:w-[30%] h-44 opacity-60" />
+        <div className="relative py-16 bg-[#27282A] ">
+            <div className="absolute bottom-32 md:top-1/2 md:-translate-y-1/2 left-0 bg-linear-to-b from-[#27282A] via-secondary to-[#27282A] w-full md:w-[30%] h-44 opacity-60" />
             <PageContainer>
-                <div className='flex justify-between'>
+                <div className='flex justify-between mb-8'>
                     <div className='flex gap-2 items-center w-full justify-end'>
                         <span className='w-1/2 h-px bg-white' />
                         <TitleSection text="About me" reverse position="right" />
                     </div>
                 </div>
-                <div className="flex flex-col-reverse md:flex-row py-8 md:gap-x-4 lg:gap-x-20 gap-y-8 items-center justify-center">
+                <div className="flex flex-col-reverse md:flex-row md:gap-x-4 lg:gap-x-20 gap-y-8 items-center justify-center">
                     <div className="relative w-full flex justify-center items-center">
                         <div className="w-full h-72 rounded-xl bg-red-500 sm:bg-green-500 md:bg-sky-500 lg:bg-secondary relative">
                             <div className="absolute bottom-0 left-0 bg-black rounded-tr-sm pt-2 pr-2 w-1/2">

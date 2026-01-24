@@ -29,9 +29,9 @@ export const Hero = () => {
     return (
         <div className="overflow-hidden">
             <div className="absolute inset-0 top-0 left-0 h-screen w-full flex justify-center overflow-hidden">
-                <div className="w-[200%] lg:w-full max-w-7xl aspect-square absolute -top-[50%] lg:-top-[110%] 2xl:-top-[95%] opacity-60"
+                <div className="w-[200%] lg:w-full max-w-7xl aspect-square absolute -top-[50%] lg:-top-[110%] 2xl:-top-[95%] opacity-40"
                     style={{
-                        background: 'radial-gradient(circle at center, #667eea, #0a0a0a, #0a0a0a)'
+                        background: 'radial-gradient(circle at center, #667eea, #2D2E32, #2D2E32)'
                     }}>
                 </div>
             </div>
