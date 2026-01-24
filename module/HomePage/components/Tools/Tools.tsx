@@ -31,7 +31,7 @@ export const Tools = () => {
                 <div className='flex justify-between mb-8'>
                     <div className='flex gap-2 items-center w-full justify-end'>
                         <span className='w-1/2 h-px bg-white' />
-                        <TitleSection text="Technologies" position="right" reverse />
+                        <TitleSection text="Skills" position="right" reverse />
                     </div>
                 </div>
                 <div

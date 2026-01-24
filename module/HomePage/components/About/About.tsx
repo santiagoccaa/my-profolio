@@ -2,6 +2,7 @@ import { PageContainer, TitleSection } from "@/components"
 import { Items } from "./Items"
 import { LuDownload } from "react-icons/lu"
 import { MdArrowForward } from "react-icons/md"
+import Link from "next/link"
 
 export const About = () => {
     return (
@@ -31,9 +32,9 @@ export const About = () => {
                         <Items />
                         <div className="relative mt-8">
                             <div className="w-32 h-14 absolute left-4 -top-1 border-2 border-secondary rounded-xs inset-0" />
-                            <button aria-label="learn more" className="relative w-34 h-12 rounded-xs bg-secondary font-bold flex items-center justify-center gap-2 cursor-pointer shadow-2xl active:scale-95 duration-300 text-md group">
+                            <Link href={"/about"} aria-label="learn more" className="relative w-34 h-12 rounded-xs bg-secondary font-bold flex items-center justify-center gap-2 cursor-pointer shadow-2xl active:scale-95 duration-300 text-md group">
                                 Learn more <MdArrowForward size={20} className="group-hover:translate-x-2 duration-300" />
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
