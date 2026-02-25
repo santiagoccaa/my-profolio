@@ -1,10 +1,16 @@
-import { TitleSection } from "@/components"
+import { PageContainer, TitleSection } from "@/components"
 import { AUTOMATIZACION, BACKEND, STYLE } from "@/constants/icons/icons"
-import Image from "next/image"
-import { FaArrowUpWideShort } from "react-icons/fa6"
-import { TbPointFilled } from "react-icons/tb"
+import CardServices from "./CardServices"
+import { AnimatedText } from "@/components/Transition"
 
-const services = [
+export interface CardServicesProps {
+  title: string,
+  image: string,
+  description: string,
+  items: string[]
+}
+
+const services: CardServicesProps[] = [
   {
     title: "Automatización",
     description: "Soluciones inteligentes para optimizar y agilizar tus procesos.",
@@ -39,53 +45,22 @@ const services = [
 
 export const Services = () => {
   return (
-    <div className="py-16">
-      <div className='flex justify-between  mb-8'>
-        <div className='flex gap-2 items-center w-full justify-start'>
-          <TitleSection text="Services" position="left" />
+    <section id="projects" className='relative h-screen flex items-center'>
+      <div className='flex justify-between mb-8 absolute top-4 right-4 w-full'>
+        <div className='flex gap-2 items-center w-full justify-end'>
           <span className='w-1/2 h-px bg-white' />
+          <AnimatedText text="Services" className="text-sm uppercase tracking-[0.4em]" />
         </div>
       </div>
-
-      <div className="flex justify-center items-center">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 gap-y-20 items-center justify-center mt-12">
-          {services.map((service) => (
-            <div
-              key={service.title}
-              className="w-full max-w-80 md:w-72 h-86 relative rounded-sm bg-black-secondary flex flex-col shadow-md hover:shadow-primary hover:scale-105 duration-300"
-            >
-              <div className="w-28 h-28 rounded-full bg-black p-2 absolute -top-16 left-1/2 -translate-x-1/2">
-                <div className="w-full h-full relative rounded-full bg-black-light">
-                  <Image src={service.image} fill alt="logo" className="object-cover" />
-                </div>
-              </div>
-
-              <div className="min-h-36 rounded-t-sm bg-linear-to-b from-primary to-secondary w-full flex flex-col items-center justify-end pb-4">
-                <h2 className="text-xl font-bold">{service.title}</h2>
-                <p className="text-sm text-white/80 px-4 mt-1 text-center">
-                  {service.description}
-                </p>
-              </div>
-
-              <div className="w-full flex flex-col items-stretch p-4 h-full">
-                <ul className="space-y-2 flex-1">
-                  {service.items.map((item, index) => (
-                    <li key={index} className="text-sm font-medium flex items-center"><TbPointFilled /> {item}</li>
-                  ))}
-                </ul>
-                <div className="flex-1 flex items-end">
-                  <div className="relative mt-8">
-                    <div className="w-28 h-12 absolute left-4 -top-1 border-2 border-secondary rounded-xs inset-0" />
-                    <button aria-label="Show me" className="relative w-30 h-10 rounded-xs bg-secondary font-bold flex items-center justify-center gap-2 cursor-pointer shadow-2xl active:scale-95 duration-300 text-md group">
-                      Show me <FaArrowUpWideShort size={20} />
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
+      <PageContainer>
+        <div className="flex justify-center items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 gap-y-20 items-center justify-center mt-12">
+            {services.map((service, index) => (
+              <CardServices key={index} {...service} />
+            ))}
+          </div>
         </div>
-      </div>
-    </div>
+      </PageContainer>
+    </section>
   )
 }

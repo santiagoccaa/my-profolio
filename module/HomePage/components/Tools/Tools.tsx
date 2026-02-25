@@ -1,10 +1,11 @@
-import { PageContainer, TitleSection } from "@/components"
+import { PageContainer } from "@/components"
 import {
     EXPRESS,
     FIGMA, GIT, GITHUB, HTML5, mysql, N8N, nextJs, node,
     react, strapi, supabase, tailwind, typescript
 } from "@/constants/icons/icons"
 import Tool from "./Tool"
+import { AnimatedText } from "@/components/Transition"
 
 const tools = [
     { image: nextJs, text: "Next.js", alt: "Next.js logo", className: "bg-white rounded-full" },
@@ -26,14 +27,14 @@ const tools = [
 export const Tools = () => {
 
     return (
-        <section className="py-16 bg-[#27282A]">
-            <PageContainer>
-                <div className='flex justify-between mb-8'>
-                    <div className='flex gap-2 items-center w-full justify-end'>
-                        <span className='w-1/2 h-px bg-white' />
-                        <TitleSection text="Skills" position="right" reverse />
-                    </div>
+        <section className='relative h-screen flex items-center'>
+            <div className='flex justify-between mb-8 absolute top-4 right-4 w-full'>
+                <div className='flex gap-2 items-center w-full justify-end'>
+                    <span className='w-1/2 h-px bg-white' />
+                    <AnimatedText text="tools" className="text-sm uppercase tracking-[0.4em]" />
                 </div>
+            </div>
+            <PageContainer>
                 <div
                     className="grid grid-cols-7 gap-4 gap-y-12"
                 >

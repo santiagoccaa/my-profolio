@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 import { Saira } from "next/font/google";
 import "./globals.css";
+import GridScreen from "@/module/HomePage/components/Hero/GridScreen";
+import { Modal } from "@/components";
+import Navbar from "@/components/Navbar/Navbar";
 
 const fredoka = Saira({
   variable: "--font-geist-sans",
-  weight:['300', '500', '600', '800'],
+  weight: ['300', '500', '600', '800'],
   subsets: ["latin"],
 });
 
@@ -24,6 +27,9 @@ export default function RootLayout({
         suppressHydrationWarning={true}
         className={`${fredoka.className} relative floating`}
       >
+        <GridScreen />
+        <Modal />
+        <Navbar />
         <main className="h-screen">
           {children}
         </main>

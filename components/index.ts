@@ -1,3 +1,4 @@
 export * from './PageContainer'
 export * from './TitleSection'
 export * from './Modal'
+export * from './Navbar'

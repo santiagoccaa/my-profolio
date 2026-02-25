@@ -1,5 +1,5 @@
-import { PageContainer, TitleSection } from "@/components"
-import { MotionPosition } from "@/components/Transition";
+import { PageContainer } from "@/components"
+import { AnimatedText, MotionPosition } from "@/components/Transition";
 import { PROJECT_GLASSES, PROJECT_TASTENEST, PROJECT_VOYAGGI } from "@/constants/images/images"
 import { ProjectPorfolio, taskFlowApi, tasteNest, voyaggi } from "@/constants/projects"
 import { FaXmark } from "react-icons/fa6"
@@ -25,7 +25,7 @@ const projectsData: Projects[] = [
         image: PROJECT_GLASSES,
         project: tasteNest,
         polygonClass: 'polygon1',
-        cardHeight: 'h-96',
+        cardHeight: 'h-120',
         align: 'left',
         position: "left"
     },
@@ -36,7 +36,7 @@ const projectsData: Projects[] = [
         image: PROJECT_VOYAGGI,
         project: voyaggi,
         polygonClass: 'polygon2',
-        cardHeight: 'h-89',
+        cardHeight: 'h-110',
         align: 'right',
         position: "top"
     },
@@ -47,7 +47,7 @@ const projectsData: Projects[] = [
         image: PROJECT_TASTENEST,
         project: taskFlowApi,
         polygonClass: 'polygon3',
-        cardHeight: 'h-96',
+        cardHeight: 'h-120',
         align: 'left',
         position: "right"
     },
@@ -57,25 +57,22 @@ export const Projects = () => {
 
 
     return (
-        <section id="projects" className='py-16 relative bg-[#27282A] '>
-            <div className="w-full h-20 opacity-50 absolute bottom-0 left-0" />
+        <section id="projects" className='relative h-screen flex items-center'>
+            {/* Title */}
+            <div className='flex justify-between mb-8 absolute top-4 right-4 w-full'>
+                <div className='flex gap-2 items-center w-full justify-end'>
+                    <span className='w-1/2 h-px bg-white' />
+                    <AnimatedText text="Projects" className="text-sm uppercase tracking-[0.4em]" />
+                </div>
+            </div>
             <PageContainer>
                 <div className="absolute bottom-20 left-8 border-4 border-primary p-2 rounded-full" />
                 <div className="absolute bottom-40 left-16 bg-primary p-1 rounded-full" />
                 <div className="absolute bottom-[40%] right-8 text-primary text-2xl rotate-6" >
                     <FaXmark />
                 </div>
-
-                {/* Title */}
-                <div className='flex justify-between mb-8'>
-                    <div className='flex gap-2 items-center w-full justify-end'>
-                        <span className='w-1/2 h-px bg-white' />
-                        <TitleSection text="Projects" reverse position="right" />
-                    </div>
-                </div>
-
                 {/* Cards projects */}
-                <div className="flex flex-col lg:flex-row items-center justify-center gap-4 w-full">
+                <div className="flex flex-col lg:flex-row items-center gap-x-16 gap-y-4 justify-center w-full">
                     {projectsData.map((project) => (
                         <CardProject key={project.id} {...project} />
                     ))}

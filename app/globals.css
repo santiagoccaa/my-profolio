@@ -2,7 +2,7 @@
 
 :root {
     --black: #0a0a0a;
-    --primary: #667eea;
+    --primary: #B384F9;
     --secondary: #764ba2;
     --black-secondary: #1C1C1C;
     --black-light: #292929;
@@ -17,7 +17,7 @@
 }
 
 body {
-    background: #2D2E32;
+    background: #0D1117;
     color: white;
 }
 
@@ -107,18 +107,27 @@ body {
     clip-path: polygon(8% 0, 100% 4%, 92% 90%, 7% 100%);
 }
 
-.cardPolygon {
-    perspective: 400px;
+.cardService {
+clip-path: polygon(
+  0 0,
+  85% 0,
+  100% 15%,
+  100% 100%,
+  0 100%
+);
 }
 
-.cardPolygon:hover .polygon1 {
-    transform: rotateY(15deg);
-}
-
-.cardPolygon:hover .polygon2 {
-    transform: rotateY(15deg);
-}
-
-.cardPolygon:hover .polygon3 {
-    transform: rotateY(-15deg);
+@keyframes flicker {
+  0%, 100% {
+    opacity: 0.45;
+  }
+  45% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.15;
+  }
+  55% {
+    opacity: 0.5;
+  }
 }
