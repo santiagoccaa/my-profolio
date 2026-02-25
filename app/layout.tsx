@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Saira } from "next/font/google";
 import "./globals.css";
 import GridScreen from "@/module/HomePage/components/Hero/GridScreen";
-import { Modal } from "@/components";
+import { Figuras, Modal } from "@/components";
 import Navbar from "@/components/Navbar/Navbar";
 import { getLocale } from "next-intl/server";
 import LanguageSelector from "@/components/LanguajeSelector";
@@ -35,6 +35,7 @@ export default async function RootLayout({
           <GridScreen />
           <Modal />
           <Navbar />
+          <Figuras />
           <div className="absolute top-4 left-4">
             <LanguageSelector />
           </div>

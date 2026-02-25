@@ -2,7 +2,6 @@ import { PageContainer } from "@/components"
 import { AnimatedText, MotionPosition } from "@/components/Transition";
 import { PROJECT_TASTENEST, PROJECT_VOYAGGI } from "@/constants/images/images"
 import { ProjectPorfolio, tasteNest, voyaggi } from "@/constants/projects"
-import { FaXmark } from "react-icons/fa6"
 import CardProject from "./CardProject";
 import { useTranslations } from "next-intl";
 
@@ -55,11 +54,6 @@ export const Projects = () => {
                 </div>
             </div>
             <PageContainer>
-                <div className="absolute bottom-20 left-8 border-4 border-primary p-2 rounded-full" />
-                <div className="absolute bottom-40 left-16 bg-primary p-1 rounded-full" />
-                <div className="absolute bottom-[40%] right-8 text-primary text-2xl rotate-6" >
-                    <FaXmark />
-                </div>
                 {/* Cards projects */}
                 <div className="flex flex-col lg:flex-row items-center gap-x-16 gap-y-4 justify-center w-full">
                     {projectsData.map((project) => (
