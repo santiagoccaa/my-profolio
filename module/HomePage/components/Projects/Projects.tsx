@@ -1,9 +1,10 @@
 import { PageContainer } from "@/components"
 import { AnimatedText, MotionPosition } from "@/components/Transition";
-import { PROJECT_GLASSES, PROJECT_TASTENEST, PROJECT_VOYAGGI } from "@/constants/images/images"
-import { ProjectPorfolio, taskFlowApi, tasteNest, voyaggi } from "@/constants/projects"
+import { PROJECT_TASTENEST, PROJECT_VOYAGGI } from "@/constants/images/images"
+import { ProjectPorfolio, tasteNest, voyaggi } from "@/constants/projects"
 import { FaXmark } from "react-icons/fa6"
 import CardProject from "./CardProject";
+import { useTranslations } from "next-intl";
 
 export interface Projects {
     id: string;
@@ -22,7 +23,7 @@ const projectsData: Projects[] = [
         id: 'taste-nest',
         title: 'Taste Nest',
         type: 'Front end',
-        image: PROJECT_GLASSES,
+        image: PROJECT_TASTENEST,
         project: tasteNest,
         polygonClass: 'polygon1',
         cardHeight: 'h-120',
@@ -39,30 +40,18 @@ const projectsData: Projects[] = [
         cardHeight: 'h-110',
         align: 'right',
         position: "top"
-    },
-    {
-        id: 'taskflow',
-        title: 'TaskFlow API',
-        type: 'Back end',
-        image: PROJECT_TASTENEST,
-        project: taskFlowApi,
-        polygonClass: 'polygon3',
-        cardHeight: 'h-120',
-        align: 'left',
-        position: "right"
-    },
+    }
 ] as const
 
 export const Projects = () => {
-
-
+    const t = useTranslations()
     return (
         <section id="projects" className='relative h-screen flex items-center'>
             {/* Title */}
             <div className='flex justify-between mb-8 absolute top-4 right-4 w-full'>
                 <div className='flex gap-2 items-center w-full justify-end'>
                     <span className='w-1/2 h-px bg-white' />
-                    <AnimatedText text="Projects" className="text-sm uppercase tracking-[0.4em]" />
+                    <AnimatedText text={t('projects.title')} className="text-sm uppercase tracking-[0.4em]" />
                 </div>
             </div>
             <PageContainer>

@@ -4,6 +4,9 @@ import "./globals.css";
 import GridScreen from "@/module/HomePage/components/Hero/GridScreen";
 import { Modal } from "@/components";
 import Navbar from "@/components/Navbar/Navbar";
+import { getLocale } from "next-intl/server";
+import LanguageSelector from "@/components/LanguajeSelector";
+import { NextIntlClientProvider } from "next-intl";
 
 const fredoka = Saira({
   variable: "--font-geist-sans",
@@ -16,23 +19,29 @@ export const metadata: Metadata = {
   description: "Portafolio de santiago contreras",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = await getLocale();
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <body
         suppressHydrationWarning={true}
         className={`${fredoka.className} relative floating`}
       >
-        <GridScreen />
-        <Modal />
-        <Navbar />
-        <main className="h-screen">
-          {children}
-        </main>
+        <NextIntlClientProvider>
+          <GridScreen />
+          <Modal />
+          <Navbar />
+          <div className="absolute top-4 left-4">
+            <LanguageSelector />
+          </div>
+          <main className="h-screen">
+            {children}
+          </main>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

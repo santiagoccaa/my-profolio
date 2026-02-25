@@ -5,6 +5,7 @@ import { AnimatedText, MotionTransition } from "@/components/Transition"
 import Social from "./Social"
 import Navbar from "./Navbar"
 import Link from "next/link"
+import { useTranslations } from "next-intl"
 
 const skills: IconSkillProps[] = [
     {
@@ -27,9 +28,9 @@ const skills: IconSkillProps[] = [
 ]
 
 export const Hero = () => {
+    const t = useTranslations('hero')
     return (
         <div className="overflow-hidden">
-
             <div className="absolute top-0 left-0 right-0 z-0 w-full h-full overflow-hidden">
                 <div className="particle"></div>
                 <div className="particle"></div>
@@ -42,7 +43,7 @@ export const Hero = () => {
                     <Social />
                     <Navbar />
                     <div className="w-full relative z-10 flex-1 flex flex-col items-center justify-center gap-y-8">
-                        <TitleSection text="Software Engineer" />
+                        <TitleSection text={t('title')} />
                         <AnimatedText text="<Santiago Contreras/>" className="w-full text-center text-5xl md:text-7xl text-primary font-medium tracking-[0.2em] " />
                         <MotionTransition delay={1.3} position="top" className="flex gap-12 items-center mt-5">
                             {

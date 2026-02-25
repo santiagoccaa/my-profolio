@@ -9,13 +9,6 @@ const Navbar = () => {
                     <RiMenu4Line size={30} />
                 </div>
                 <div className="h-px md:h-16 w-full md:w-px bg-white" />
-                <div className="flex flex-row-reverse md:flex-col text-sm uppercase items-center">
-                    <span className="md:-rotate-90">E</span>
-                    <span className="md:-rotate-90">M</span>
-                    <span className="md:-rotate-90">O</span>
-                    <span className="md:-rotate-90">H</span>
-                    <span className="w-1 h-1 bg-primary rounded-full" />
-                </div>
             </div>
         </MotionTransition>
     )

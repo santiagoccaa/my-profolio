@@ -5,9 +5,11 @@ import { motion, AnimatePresence } from "framer-motion"
 import { usePorfolioStore } from "@/store/contextPorpofolio"
 import Image from "next/image"
 import { useBlockScroll } from "@/hooks"
+import { useTranslations } from "next-intl"
 
 
 export const Modal = () => {
+    const t = useTranslations()
     const { openModal, setOpenModal, project } = usePorfolioStore()
 
     useBlockScroll(openModal);
@@ -78,12 +80,12 @@ export const Modal = () => {
                                     </h2>
                                     {/* Description */}
                                     <div>
-                                        <p className="text-black-secondary font-extralight text-lg md:text-sm mt-8">{description}</p>
-                                        <p className="text-black-secondary font-extralight text-lg md:text-sm mt-2">{description2}</p>
+                                        <p className="text-black-secondary font-extralight text-lg md:text-sm mt-8">{t(`projects.${description}`)}</p>
+                                        <p className="text-black-secondary font-extralight text-lg md:text-sm mt-2">{t(`projects.${description2}`)}</p>
                                     </div>
                                     <div className="mt-8">
                                         {/* Tecnologies */}
-                                        <h2 className="text-sm font-medium uppercase text-black-light">Developed with</h2>
+                                        <h2 className="text-sm font-medium uppercase text-black-light">{t('common.tools')} </h2>
                                         <div className="flex gap-4 mt-4">
                                             {tecnologis.map((i, index) => (
                                                 <div key={index} className="w-10 h-10 relative">

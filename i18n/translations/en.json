@@ -1,0 +1,19 @@
+{
+    "common": {
+        "tools": "Developed with"
+    },
+    "hero": {
+        "title": "Software Engineer"
+    },
+    "projects": {
+        "title": "Projects",
+        "voyaggi": {
+            "text1": "Voyaggi is a travel planner that uses artificial intelligence to recommend different destinations and activities in the city users want to visit, along with an approximate cost.",
+            "text2": "In addition to that, users can adjust various details such as hotels, transportation, preferences, tours, and much more. It offers an interactive interface that allows users to reorder activities as they wish and much more."
+        },
+        "tasteNest": {
+            "text1": "Conceptual web design project for a restaurant, focused on visual experience and navigation structure.",
+            "text2": "The proposal features sections such as Home, Menu, and About, with an emphasis on layout, typography, and visual hierarchy. The project is purely demonstrative and does not include real functionality."
+        }
+    }
+}
