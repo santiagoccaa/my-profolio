@@ -51,7 +51,7 @@ const Navbar = () => {
     const pathName = usePathname()
     if (pathName === '/') return
     return (
-        <div className='w-fit px-4 py-2 rounded-full absolute left-1/2 overflow-hidden -translate-x-1/2 bottom-4 z-40 flex items-center gap-4'>
+        <div className='w-fit px-4 py-2 rounded-full fixed left-1/2 overflow-hidden -translate-x-1/2 bottom-4 z-40 flex items-center gap-4'>
             <div className="absolute w-full h-full bg-primary opacity-50 top-0 left-0" />
             {
                 nav.map(({ href, icon }, index) => (

@@ -2,29 +2,44 @@ import { MotionTransition } from "@/components/Transition"
 import { LuGithub, LuLinkedin } from "react-icons/lu"
 import { BiLogoGmail } from "react-icons/bi"
 import { IconType } from "react-icons"
-import { GITHUB, GMAIL, LINKEDIN } from "@/constants/profile/santiago"
+import { EMAIL, GITHUB, LINKEDIN } from "@/constants/profile/santiago"
 
 type Social = {
     href: string,
     icon: IconType,
-    arial:string
+    arial: string
+}
+
+export const getEmailHref = () => {
+    const isMobile = /Android|iPhone|iPad/i.test(
+        typeof navigator !== "undefined" ? navigator.userAgent : ""
+    )
+
+    const subject = encodeURIComponent("Contacto")
+    const body = encodeURIComponent("Hellow...")
+
+    if (isMobile) {
+        return `googlegmail://co?to=${EMAIL}&subject=${subject}&body=${body}`
+    }
+
+    return `https://mail.google.com/mail/?view=cm&to=${EMAIL}&su=${subject}&body=${body}`
 }
 
 const social: Social[] = [
     {
         href: LINKEDIN,
         icon: LuLinkedin,
-        arial:'Ir a Linkedin'
+        arial: 'Ir a Linkedin'
     },
     {
         href: GITHUB,
         icon: LuGithub,
-        arial:"Ir a GitHub"
+        arial: "Ir a GitHub"
     },
     {
-        href: GMAIL,
+        href: getEmailHref(),
         icon: BiLogoGmail,
-        arial:"Ir a Gmail"
+        arial: "Enviar correo",
     },
 ]
 

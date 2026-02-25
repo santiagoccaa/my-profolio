@@ -1,4 +1,4 @@
-import { EXPRESS, FIGMA, MONGODB, nextJs, react, typescript } from "../icons/icons"
+import { EXPRESS, FIGMA, MONGODB, nextJs, react, typescript, openai } from "../icons/icons"
 import { MODAL_VOYAGGI, PROJECT_TASTENEST } from "../images/images"
 import { LINK_TASTENEST, LINK_VOYAGGI } from "../images/links"
 
@@ -26,7 +26,7 @@ export const voyaggi: ProjectPorfolio = {
     name: "Voyaggi",
     description: "voyaggi.text1",
     description2: "voyaggi.text2",
-    tecnologis: [nextJs, react, EXPRESS, MONGODB, typescript],
+    tecnologis: [nextJs, react, EXPRESS, MONGODB, typescript, openai],
     link: LINK_VOYAGGI
 } as const
 
