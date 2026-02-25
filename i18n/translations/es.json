@@ -1,6 +1,8 @@
 {
     "common": {
-        "tools": "Desarrollado con"
+        "tools": "Desarrollado con",
+        "donwload": "Descargar CV",
+        "titleTools":"Herramientas"
     },
     "hero": {
         "title": "Ingeniero de software"
@@ -15,5 +17,61 @@
             "text1": "Proyecto de diseño web conceptual para un restaurante, enfocado en la experiencia visual y la estructura de navegación.",
             "text2": " La propuesta presenta secciones como Home, Menu y About, con un enfoque en layout, tipografía y jerarquía visual. El proyecto es meramente demostrativo y no incluye funcionalidades reales."
         }
+    },
+    "services": {
+        "title": "Servicios",
+        "automatizacion": {
+            "title": "Automatización",
+            "description": "Automatizo procesos para que tu negocio ahorre tiempo, reduzca y errores.",
+            "item1": "Menos trabajo manual y más eficiencia",
+            "item2": "Procesos claros que se ejecutan solos",
+            "item3": "Más tiempo para enfocarte en vender y crecer"
+        },
+        "webDesign": {
+            "title": "Web Design",
+            "description": "Diseño sitios web que no solo se ven bien, sino que comunican confianza y convierten visitantes en clientes.",
+            "item1": "Diseño alineado con tu marca y objetivos",
+            "item2": "Experiencia clara, simple y fácil de usar",
+            "item3": "Pensado para captar, convencer y convertir    "
+        },
+        "backendWeb": {
+            "title": "Backend Web",
+            "description": "Desarrollo la parte interna de tu aplicación para que funcione rápido y sea segura.",
+            "item1": "Sistemas estables y bien organizados",
+            "item2": "Preparado para soportar más usuarios",
+            "item3": "Menos problemas técnicos, más tranquilidad"
+        }
+    },
+    "aboutMe": {
+        "title": "Sobre Mí",
+        "subtitle": "Un Breve Resumen de mi",
+        "subtitle2": "Trayectoria Profesional",
+        "items": {
+            "title1": "Ingeniero de Software",
+            "description1": "Soy egresado de Ingeniería de Software de la Universidad de Cartagena. Mi formación académica me brindó una base sólida en programación, diseño de sistemas y resolución de problemas.",
+            "titl2": "Aprendizaje Continuo",
+            "description2": "He perfeccionado mis habilidades a través de cursos en línea, proyectos autodidactas y experimentación práctica. Cada desafío me ha ayudado a crecer como desarrollador y como profesional.",
+            "titl3": "Experiencia",
+            "description3": "Realicé prácticas profesionales en un par de empresas. También he desarrollado y contribuido a varios proyectos independientes que fortalecieron mis habilidades técnicas y de trabajo en equipo."
+        }
+    },
+    "tools": {
+        "title": "Herramientas",
+        "figma": {
+            "description": "Uso Figma para diseñar interfaces claras y funcionales, creando prototipos que facilitan la toma de decisiones antes de desarrollar."
+        },
+        "gitHub": {
+            "description": "Gestiono el control de versiones de los proyectos con GitHub, manteniendo el código organizado, seguro y fácil de escalar.  "
+        },
+        "n8n": {
+            "description": "Automatizo flujos de trabajo y tareas repetitivas con n8n para ahorrar tiempo y mejorar la eficiencia del día a día."
+        }
+    },
+    "contact": {
+        "title": "Contacto",
+        "subtitle":"Envia un mensaje",
+        "inputEmail": "email@ejemplo.com",
+        "inputText": "Que quieres saber...",
+        "button":"Enviar"
     }
 }

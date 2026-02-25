@@ -6,6 +6,7 @@ import {
 } from "@/constants/icons/icons"
 import Tool from "./Tool"
 import { AnimatedText } from "@/components/Transition"
+import { useTranslations } from "next-intl"
 
 const tools = [
     { image: nextJs, text: "Next.js", alt: "Next.js logo", className: "bg-white rounded-full" },
@@ -26,12 +27,14 @@ const tools = [
 
 export const Tools = () => {
 
+    const t = useTranslations()
+
     return (
         <section className='relative h-screen flex items-center'>
             <div className='flex justify-between mb-8 absolute top-4 right-4 w-full'>
                 <div className='flex gap-2 items-center w-full justify-end'>
                     <span className='w-1/2 h-px bg-white' />
-                    <AnimatedText text="tools" className="text-sm uppercase tracking-[0.4em]" />
+                    <AnimatedText key={t('common.titleTools')} text={t('common.titleTools')} className="text-sm uppercase tracking-[0.4em]" />
                 </div>
             </div>
             <PageContainer>

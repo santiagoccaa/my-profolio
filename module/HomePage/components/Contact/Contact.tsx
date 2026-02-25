@@ -1,5 +1,6 @@
 import { PageContainer } from "@/components"
 import { AnimatedText } from "@/components/Transition"
+import { useTranslations } from "next-intl"
 import { BiLogoGmail, BiSend } from "react-icons/bi"
 import { FaWhatsapp } from "react-icons/fa6"
 import { LuLinkedin } from "react-icons/lu"
@@ -23,12 +24,13 @@ const contacts = [
 ]
 
 export const Contact = () => {
+  const t = useTranslations('contact')
   return (
     <section id="projects" className='relative h-screen flex items-center'>
       <div className='flex justify-between mb-8 absolute top-4 right-4 w-full'>
         <div className='flex gap-2 items-center w-full justify-end'>
           <span className='w-1/2 h-px bg-white' />
-          <AnimatedText text="Contact" className="text-sm uppercase tracking-[0.4em]" />
+          <AnimatedText key={t('title')} text={t('title')} className="text-sm uppercase tracking-[0.4em]" />
         </div>
       </div>
       <PageContainer>
@@ -51,15 +53,15 @@ export const Contact = () => {
           </div>
           <div className="w-full md:w-1/2">
             <form action="" className="flex flex-col gap-4 max-w-96 text-center">
-              <h2 className="text-xl font-medium">Send Message</h2>
-              <input type="email" placeholder="email@explame.com" autoComplete="off" className="p-2 bg-white text-black font-medium text-md rounded-sm" />
-              <textarea name="" id="" placeholder="Question..." className="p-2 bg-white text-black font-light text-md rounded-sm">
+              <h2 className="text-xl font-medium">{t('subtitle')}</h2>
+              <input type="email" placeholder={t('inputEmail')} autoComplete="off" className="p-2 bg-white text-black font-medium text-md rounded-sm" />
+              <textarea name="" id="" placeholder={t('inputText')} className="p-2 bg-white text-black font-light text-md rounded-sm">
 
               </textarea>
               <div className="relative mt-8">
                 <div className="w-32 h-14 absolute left-4 -top-1 border-2 border-secondary rounded-xs inset-0" />
                 <button aria-label="send message" className="relative w-34 h-12 rounded-xs bg-secondary font-bold flex items-center justify-center gap-2 cursor-pointer shadow-2xl active:scale-95 duration-300 text-md group">
-                  Send <BiSend size={20} className="group-hover:translate-x-2 duration-300" />
+                  {t('button')} <BiSend size={20} className="group-hover:translate-x-2 duration-300" />
                 </button>
               </div>
             </form>

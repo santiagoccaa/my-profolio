@@ -1,6 +1,8 @@
 {
     "common": {
-        "tools": "Developed with"
+        "tools": "Developed with",
+        "donwload": "Dowload CV",
+        "titleTools":"Tools"
     },
     "hero": {
         "title": "Software Engineer"
@@ -15,5 +17,61 @@
             "text1": "Conceptual web design project for a restaurant, focused on visual experience and navigation structure.",
             "text2": "The proposal features sections such as Home, Menu, and About, with an emphasis on layout, typography, and visual hierarchy. The project is purely demonstrative and does not include real functionality."
         }
+    },
+    "services": {
+        "title": "Services",
+        "automatizacion": {
+            "title": "Automation",
+            "description": "I automate processes so your business saves time and reduces errors.",
+            "item1": "Less manual work and more efficiency",
+            "item2": "Clear processes that run on their own",
+            "item3": "More time to focus on selling and growing"
+        },
+        "webDesign": {
+            "title": "Web Design",
+            "description": "I design websites that not only look great, but communicate trust and turn visitors into customers.",
+            "item1": "Design aligned with your brand and goals",
+            "item2": "Clear, simple, and easy-to-use experience",
+            "item3": "Built to capture, convince, and convert"
+        },
+        "backendWeb": {
+            "title": "Backend Web",
+            "description": "I develop the internal side of your application so it runs fast and stays secure.",
+            "item1": "Stable and well-structured systems",
+            "item2": "Ready to support more users",
+            "item3": "Fewer technical issues, more peace of mind"
+        }
+    },
+    "aboutMe": {
+        "title": "About Me",
+        "subtitle": "A Brief Overview of",
+        "subtitle2": "Professional Journey",
+        "items": {
+            "title1": "Software Engineer",
+            "description1": "I hold a degree in Software Engineering from the University of Cartagena. My academic background provided a strong foundation in programming, system design, and problem-solving.",
+            "titl2": "Continuous Learning ",
+            "description2": "I’ve refined my skills through online courses, self-driven projects, and hands-on experimentation. Each challenge has helped me grow as both a developer and a thinker.",
+            "titl3": "Experience",
+            "description3": "I completed internships at a couple of companies. I’ve also built and contributed to several independent projects that strengthened my and teamwork abilities."
+        }
+    },
+    "tools": {
+        "title": "Tools",
+        "figma": {
+            "description": "I use Figma to design clear and functional interfaces, creating prototypes that make decision-making easier before development begins."
+        },
+        "gitHub": {
+            "description": "I manage version control for projects with GitHub, keeping the code organized, secure, and easy to scale."
+        },
+        "n8n": {
+            "description": "I automate workflows and repetitive tasks with n8n to save time and improve day-to-day efficiency."
+        }
+    },
+    "contact": {
+        "title": "Contact",
+        "subtitle": "Send Message",
+        "inputEmail": "email@explame.com",
+        "inputText": "Question...",
+        "button": "Send"
     }
 }

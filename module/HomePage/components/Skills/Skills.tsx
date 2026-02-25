@@ -1,27 +1,32 @@
 import { PageContainer } from "@/components";
 import { AnimatedText } from "@/components/Transition";
 import { FIGMA, GITHUB, N8N } from "@/constants/icons/icons";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 const otherSkills = [
   {
     title: 'Figma',
-    description: 'Se todo lo necesario de figma para poder guiarme y hacer cualquier diseño de manera precisa.',
-    image: FIGMA
+    description:
+      'figma.description',
+    image: FIGMA,
   },
   {
-    title: 'Github',
-    description: 'Mi favorito para manejar version de proyectos, se todo lo necesario para crear proyectos, issues y merge.',
-    image: GITHUB
+    title: 'GitHub',
+    description:
+      'gitHub.description',
+    image: GITHUB,
   },
   {
     title: 'n8n',
-    description: 'Lo utilizo para automatizar diferentes tareas repetitivas, un ejemplo claro puede ser ordenar gmail.',
-    image: N8N
+    description:
+      'n8n.description',
+    image: N8N,
   },
-]
+];
 
 export default function Skills() {
+  const t = useTranslations('tools')
 
   return (
     <section className='relative h-screen flex items-center'>
@@ -29,7 +34,7 @@ export default function Skills() {
       <div className='flex justify-between mb-8 absolute top-4 right-4 w-full'>
         <div className='flex gap-2 items-center w-full justify-end'>
           <span className='w-1/2 h-px bg-white' />
-          <AnimatedText text="Skills" className="text-sm uppercase tracking-[0.4em]" />
+          <AnimatedText key={t('title')} text={t('title')} className="text-sm uppercase tracking-[0.4em]" />
         </div>
       </div>
       <PageContainer>
@@ -47,7 +52,7 @@ export default function Skills() {
                     </div>
                     <h2 className="text-xl font-bold">{title}</h2>
                     <p className="text-sm">
-                      {description}
+                      {t(description)}
                     </p>
                   </div>
                 </div>

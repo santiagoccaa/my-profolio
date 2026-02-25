@@ -51,7 +51,7 @@ export const Projects = () => {
             <div className='flex justify-between mb-8 absolute top-4 right-4 w-full'>
                 <div className='flex gap-2 items-center w-full justify-end'>
                     <span className='w-1/2 h-px bg-white' />
-                    <AnimatedText text={t('projects.title')} className="text-sm uppercase tracking-[0.4em]" />
+                    <AnimatedText key={t('projects.title')} text={t('projects.title')} className="text-sm uppercase tracking-[0.4em]" />
                 </div>
             </div>
             <PageContainer>
