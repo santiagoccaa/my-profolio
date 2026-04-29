@@ -108,33 +108,34 @@ body {
 }
 
 .cardService {
-clip-path: polygon(
-  0 0,
-  85% 0,
-  100% 15%,
-  100% 100%,
-  0 100%
-);
+    clip-path: polygon(0 0,
+            85% 0,
+            100% 15%,
+            100% 100%,
+            0 100%);
 }
 
 @keyframes flicker {
-  0%, 100% {
-    opacity: 0.45;
-  }
-  45% {
-    opacity: 0.5;
-  }
-  50% {
-    opacity: 0.15;
-  }
-  55% {
-    opacity: 0.5;
-  }
+
+    0%,
+    100% {
+        opacity: 0.45;
+    }
+
+    45% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 0.15;
+    }
+
+    55% {
+        opacity: 0.5;
+    }
 }
 
-.efectoImagen{
-    mask-image: linear-gradient(
-        black 90%,
-        transparent
-    );
+.efectoImagen {
+    mask-image: linear-gradient(black 90%,
+            transparent);
 }
