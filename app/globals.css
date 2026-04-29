@@ -131,3 +131,10 @@ clip-path: polygon(
     opacity: 0.5;
   }
 }
+
+.efectoImagen{
+    mask-image: linear-gradient(
+        black 90%,
+        transparent
+    );
+}

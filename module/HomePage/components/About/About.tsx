@@ -5,6 +5,7 @@ import { MdArrowForward } from "react-icons/md"
 import Link from "next/link"
 import { AnimatedText } from "@/components/Transition"
 import { useTranslations } from "next-intl"
+import Image from "next/image"
 
 export const About = () => {
     const t = useTranslations()
@@ -20,15 +21,18 @@ export const About = () => {
             <div className="absolute hidden bottom-32 md:top-1/2 md:-translate-y-1/2 left-0 bg-linear-to-b from-[#0D1117] via-secondary to-[#0D1117] w-full md:w-[30%] h-44 opacity-60" />
             <PageContainer>
                 <div className="flex flex-col-reverse md:flex-row md:gap-x-4 lg:gap-x-20 gap-y-8 items-center justify-center">
-                    <div className="relative w-full flex justify-center items-center">
-                        <div className="w-full h-30 lg:h-72 rounded-xl bg-transparent relative">
-                            <div className="absolute bottom-0 left-0 bg-black rounded-tr-sm pt-2 pr-2 w-1/2">
-                                <button aria-label="dowload cv" className="w-full h-14 bg-secondary rounded-sm shadow-2xl flex items-center justify-center text-md font-medium gap-2 cursor-pointer group">
-                                    {t('common.donwload')} <LuDownload size={20} className="group-hover:translate-y-0.5 duration-300" />
-                                </button>
+                    <div className="relative w-full flex items-end justify-end">
+                        <div className="w-100 aspect-square border border-primary rounded-full absolute bottom-4 right-4" />
+                        <div className="w-100 h-100 rounded-full bg-linear-to-b to-primary from-secondary relative overflow-hidden">
+                            <div className="w-100 h-100 absolute bottom-0 -right-10">
+                                <Image src={"/santiago2.png"} alt="student" fill sizes="400px" />
                             </div>
                         </div>
+                        <button aria-label="dowload cv" className=" h-14 bg-secondary rounded-sm shadow-2xl flex items-center justify-center text-md font-medium gap-2 cursor-pointer group absolute bottom-0 left-0 w-1/2 hover:shadow-xl hover:shadow-primary hover:scale-105 hover:-translate-y-2 transition-all duration-300">
+                            {t('common.donwload')} <LuDownload size={20} className="group-hover:translate-y-0.5 duration-300" />
+                        </button>
                     </div>
+
                     <div>
                         <h2 className="text-3xl">
                             {t('aboutMe.subtitle')} <br /> My <span className="text-primary">{t('aboutMe.subtitle2')}</span>
@@ -43,6 +47,6 @@ export const About = () => {
                     </div>
                 </div>
             </PageContainer>
-        </section>
+        </section >
     )
 }

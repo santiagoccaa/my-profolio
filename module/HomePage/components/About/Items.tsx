@@ -1,3 +1,5 @@
+import { useTranslations } from "next-intl"
+
 interface Trajectory {
     id: number,
     title: string,
@@ -7,22 +9,23 @@ interface Trajectory {
 const trajectory: Trajectory[] = [
     {
         id: 1,
-        title: "Software Engineer",
-        description: "I hold a degree in Software Engineering from the University of Cartagena. My academic background provided a strong foundation in programming, system design, and problem-solving.",
+        title: "title1",
+        description: "description1",
     },
     {
         id: 2,
-        title: "Continuous Learning",
-        description: "I’ve refined my skills through online courses, self-driven projects, and hands-on experimentation. Each challenge has helped me grow as both a developer and a thinker.",
+        title: "title2",
+        description: "description2",
     },
     {
         id: 3,
-        title: "Experience",
-        description: "I completed internships at a couple of companies. I’ve also built and contributed to several independent projects that strengthened my and teamwork abilities.",
+        title: "title3",
+        description: "description3",
     },
 ]
 
 export const Items = () => {
+    const t = useTranslations('aboutMe.items')
     return (
         <div className="mt-8 flex flex-col justify-center items-center gap-y-4">
             {
@@ -35,7 +38,7 @@ export const Items = () => {
                             </span>
                         </div>
                         <div className="flex flex-col">
-                            <p className="text-sm font-light w-full"><span className="font-medium">{title} </span>{description}</p>
+                            <p className="text-sm font-light w-full"><span className="font-medium">{t(title)} </span>{t(description)}</p>
                         </div>
                     </div>
                 ))
