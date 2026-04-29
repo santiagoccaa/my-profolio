@@ -1,7 +1,7 @@
 import { PageContainer } from "@/components"
 import { AnimatedText, MotionPosition } from "@/components/Transition";
 import { PROJECT_TASTENEST, PROJECT_VOYAGGI } from "@/constants/images/images"
-import { ProjectPorfolio, tasteNest, voyaggi } from "@/constants/projects"
+import { academy, ProjectPorfolio, tasteNest, voyaggi } from "@/constants/projects"
 import CardProject from "./CardProject";
 import { useTranslations } from "next-intl";
 
