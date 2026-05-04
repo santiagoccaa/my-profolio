@@ -48,22 +48,24 @@ const Navbar = () => {
     const pathName = usePathname()
     if (pathName === '/') return
     return (
-        <div className=' fixed left-1/2 -translate-x-1/2 bottom-4 z-40 w-fit'>
-            <div className="relative bg-neutral-800 rounded-full px-2 py-2 flex gap-2 shadow-lg">
-                <span
-                    className="absolute top-2 h-10 w-10 rounded-full bg-primary transition-all duration-500 ease-out"
-                    style={{
-                        transform: `translateX(${active * 120}%)`,
-                    }}
-                />
-                {
-                    nav.map(({ href, icon }, index) => (
-                        <Link key={index} href={href} onClick={() => setActive(index)}
-                            className={`relative z-10 min-w-10 h-10 rounded-full flex items-center justify-center text-sm font-medium transition-colors duration-300 cursor-pointer ${active === index ? "text-white" : "text-primary"} text-xl`}>
-                            {icon}
-                        </Link>
-                    ))
-                }
+        <div className="w-full bg-red-100 mt-10 pb-4 flex justify-center">
+            <div className='w-fit'>
+                <div className="relative bg-neutral-800 rounded-full px-2 py-2 flex gap-2 shadow-lg">
+                    <span
+                        className="absolute top-2 h-10 w-10 rounded-full bg-primary transition-all duration-500 ease-out"
+                        style={{
+                            transform: `translateX(${active * 120}%)`,
+                        }}
+                    />
+                    {
+                        nav.map(({ href, icon }, index) => (
+                            <Link key={index} href={href} onClick={() => setActive(index)}
+                                className={`relative z-10 min-w-10 h-10 rounded-full flex items-center justify-center text-sm font-medium transition-colors duration-300 cursor-pointer ${active === index ? "text-white" : "text-primary"} text-xl`}>
+                                {icon}
+                            </Link>
+                        ))
+                    }
+                </div>
             </div>
         </div>
     )

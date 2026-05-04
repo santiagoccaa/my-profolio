@@ -18,14 +18,14 @@ const CardProject = (project: Projects) => {
                 }`}
         >
             <div
-                className={`w-64 h-96 rounded-md shadow-sm overflow-hidden relative group hover:-translate-y-2 hover:shadow-2xl duration-300`}
+                className="w-64 h-110 rounded-md shadow-sm overflow-hidden relative group hover:-translate-y-2 hover:shadow-2xl duration-300"
             >
                 {/* Overlay */}
-                <div className={`h-full lg:h-0 w-full absolute bottom-0 left-0 group-hover:h-96 duration-300 overflow-hidden bg-black opacity-60`} />
+                <div className={`h-full lg:h-0 w-full absolute bottom-0 left-0 group-hover:h-110 duration-300 overflow-hidden bg-black opacity-60`} />
                 <div
                     className={` transition-all duration-700 w-72 h-96 relative group`}
                 >
-                    <div className={`w-72 h-96 absolute top-0 left-0`}>
+                    <div className={`w-72 h-110 absolute top-0 left-0`}>
                         <Image
                             src={project.image}
                             fill

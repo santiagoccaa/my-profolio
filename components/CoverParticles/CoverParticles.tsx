@@ -5,7 +5,7 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 
 const CoverParticles = () => {
-    const color = '#005cfe'
+    const color = '#B384F9'
     const [init, setInit] = useState(false);
 
     useEffect(() => {
