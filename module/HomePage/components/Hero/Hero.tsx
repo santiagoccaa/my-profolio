@@ -6,6 +6,7 @@ import Social from "./Social"
 import Navbar from "./Navbar"
 import Link from "next/link"
 import { useTranslations } from "next-intl"
+import CoverParticles from "@/components/CoverParticles/CoverParticles"
 
 const skills: IconSkillProps[] = [
     {
@@ -31,13 +32,7 @@ export const Hero = () => {
     const t = useTranslations('hero')
     return (
         <div className="overflow-hidden">
-            <div className="absolute top-0 left-0 right-0 z-0 w-full h-full overflow-hidden">
-                <div className="particle"></div>
-                <div className="particle"></div>
-                <div className="particle"></div>
-                <div className="particle"></div>
-                <div className="particle"></div>
-            </div>
+            <CoverParticles />
             <PageContainer>
                 <div className="min-h-screen max-h-screen w-full flex-1 relative z-10 flex flex-col lg:flex-row">
                     <Social />
