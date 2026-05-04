@@ -29,9 +29,9 @@ export default function Skills() {
   const t = useTranslations('tools')
 
   return (
-    <section className='relative h-screen flex items-center'>
+    <section className='relative'>
       {/* Header */}
-      <div className='flex justify-between mb-8 absolute top-4 right-4 w-full'>
+      <div className='flex justify-between w-full'>
         <div className='flex gap-2 items-center w-full justify-end'>
           <span className='w-10 lg:w-full max-w-1/2 h-px bg-white' />
           <AnimatedText key={t('title')} text={t('title')} className="text-sm uppercase tracking-[0.4em]" />

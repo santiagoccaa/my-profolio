@@ -10,8 +10,8 @@ import Image from "next/image"
 export const About = () => {
     const t = useTranslations()
     return (
-        <section id="projects" className='relative h-screen flex items-center'>
-            <div className='flex justify-between mb-8 absolute top-4 right-4 w-full'>
+        <section id="projects" className='relative'>
+            <div className='flex justify-between w-full'>
                 <div className='flex gap-2 items-center w-full justify-end'>
                     <span className='w-10 lg:w-full max-w-1/2 h-px bg-white' />
                     <AnimatedText key={t('aboutMe.title')} text={t('aboutMe.title')} className="text-sm uppercase tracking-[0.4em]" />

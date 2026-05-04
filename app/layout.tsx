@@ -33,11 +33,11 @@ export default async function RootLayout({
         <NextIntlClientProvider>
           <GridScreen />
           <Modal />
-          <Navbar />
           <Figuras />
           <NavLang />
-          <main className="h-screen shadow-2xl">
+          <main className="min-h-screen shadow-2xl">
             {children}
+            <Navbar />
           </main>
         </NextIntlClientProvider>
       </body>
