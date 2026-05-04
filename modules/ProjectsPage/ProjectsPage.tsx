@@ -1,4 +1,4 @@
-import { PageContainer } from "@/components"
+import { PageContainer, TitlePage } from "@/components"
 import { AnimatedText, MotionPosition } from "@/components/Transition";
 import { PROJECT_TASTENEST, PROJECT_VOYAGGI } from "@/constants/images/images"
 import { academy, ProjectPorfolio, tasteNest, voyaggi } from "@/constants/projects"
@@ -47,12 +47,7 @@ export const ProjectsPage = () => {
     return (
         <section className='relative  bg-blue-200'>
             {/* Title */}
-            <div className='flex justify-between mb-8 w-full'>
-                <div className='flex gap-2 items-center w-full justify-end'>
-                    <span className='w-10 lg:w-full max-w-1/2 h-px bg-white' />
-                    <AnimatedText key={t('projects.title')} text={t('projects.title')} className="text-sm uppercase tracking-[0.4em]" />
-                </div>
-            </div>
+            <TitlePage title="projects.title" />
             <PageContainer>
                 {/* Cards projects */}
                 <div className="flex flex-col lg:flex-row items-center gap-x-16 gap-y-4 justify-center w-full">

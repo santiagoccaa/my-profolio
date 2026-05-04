@@ -1,5 +1,4 @@
-import { PageContainer } from "@/components";
-import { AnimatedText } from "@/components/Transition";
+import { PageContainer, TitlePage } from "@/components";
 import { FIGMA, GITHUB, N8N } from "@/constants/icons/icons";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
@@ -31,12 +30,7 @@ export const SkillsPage = () => {
   return (
     <section className='relative'>
       {/* Header */}
-      <div className='flex justify-between w-full'>
-        <div className='flex gap-2 items-center w-full justify-end'>
-          <span className='w-10 lg:w-full max-w-1/2 h-px bg-white' />
-          <AnimatedText key={t('title')} text={t('title')} className="text-sm uppercase tracking-[0.4em]" />
-        </div>
-      </div>
+      <TitlePage title="tools.title" />
       <PageContainer>
         <div className="flex justify-center items-center">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-12 items-stretch">

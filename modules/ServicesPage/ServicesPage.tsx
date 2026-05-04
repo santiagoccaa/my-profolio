@@ -1,8 +1,6 @@
-import { PageContainer } from "@/components"
+import { PageContainer, TitlePage } from "@/components"
 import { AUTOMATIZACION, BACKEND, STYLE } from "@/constants/icons/icons"
 import CardServices from "./CardServices"
-import { AnimatedText } from "@/components/Transition"
-import { useTranslations } from "next-intl"
 
 export interface CardServicesProps {
   title: string,
@@ -46,15 +44,10 @@ const services: CardServicesProps[] = [
   },
 ];
 export const ServicesPage = () => {
-  const t = useTranslations('services')
+
   return (
     <section id="projects" className='relative bg-blue-200'>
-      <div className='flex justify-between mb-8 w-full'>
-        <div className='flex gap-2 items-center w-full justify-end'>
-          <span className='w-10 lg:w-full max-w-1/2 h-px bg-white' />
-          <AnimatedText key={t('title')} text={t('title')} className="text-sm uppercase tracking-[0.4em]" />
-        </div>
-      </div>
+      <TitlePage title="services.title" />
       <PageContainer>
         <div className="flex justify-center items-center">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 gap-y-20 items-center justify-center mt-12">

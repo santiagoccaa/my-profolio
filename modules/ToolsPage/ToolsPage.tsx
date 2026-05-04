@@ -1,4 +1,4 @@
-import { PageContainer } from "@/components"
+import { PageContainer, TitlePage } from "@/components"
 import {
     EXPRESS,
     FIGMA, GIT, GITHUB, HTML5, mysql, N8N, nextJs, node,
@@ -31,12 +31,7 @@ export const ToolsPage = () => {
 
     return (
         <section className='relative'>
-            <div className='flex justify-between w-full'>
-                <div className='flex gap-2 items-center w-full justify-end'>
-                    <span className='w-10 lg:w-full max-w-1/2 h-px bg-white' />
-                    <AnimatedText key={t('common.titleTools')} text={t('common.titleTools')} className="text-sm uppercase tracking-[0.4em]" />
-                </div>
-            </div>
+            <TitlePage title="common.titleTools" />
             <PageContainer>
                 <div
                     className="grid grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-4 gap-y-12"

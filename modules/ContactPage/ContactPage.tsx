@@ -1,6 +1,6 @@
 'use client'
 
-import { PageContainer } from "@/components"
+import { PageContainer, TitlePage } from "@/components"
 import { AnimatedText } from "@/components/Transition"
 import { useTranslations } from "next-intl"
 import { BiLogoGmail, BiSend } from "react-icons/bi"
@@ -64,12 +64,7 @@ export const ContactPage = () => {
 
   return (
     <section id="projects" className='relative'>
-      <div className='flex justify-between w-full'>
-        <div className='flex gap-2 items-center w-full justify-end'>
-          <span className='w-10 lg:w-full max-w-1/2 h-px bg-white' />
-          <AnimatedText key={t('title')} text={t('title')} className="text-sm uppercase tracking-[0.4em]" />
-        </div>
-      </div>
+      <TitlePage title="contact.title" />
       <PageContainer>
         <div className="flex flex-col md:flex-row mt-4">
           <div className="w-full md:w-1/2">
