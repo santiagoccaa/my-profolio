@@ -1,46 +1,64 @@
-import { PageContainer, TitlePage } from "@/components"
-import {
-    EXPRESS,
-    FIGMA, GIT, GITHUB, HTML5, mysql, N8N, nextJs, node,
-    react, strapi, supabase, tailwind, typescript
-} from "@/constants/icons/icons"
-import Tool from "./Tool"
-import { AnimatedText } from "@/components/Transition"
-import { useTranslations } from "next-intl"
+import { PageContainer, TitlePage } from "@/components";
+import { FIGMA, GITHUB, N8N } from "@/constants/icons/icons";
+import { useTranslations } from "next-intl";
+import Image from "next/image";
 
-const tools = [
-    { image: nextJs, text: "Next.js", alt: "Next.js logo", className: "bg-white rounded-full" },
-    { image: mysql, text: "MySQL", alt: "MySQL logo" },
-    { image: node, text: "Node.js", alt: "Node.js logo" },
-    { image: react, text: "React", alt: "React logo" },
-    { image: strapi, text: "Strapi", alt: "Strapi logo" },
-    { image: tailwind, text: "Tailwind", alt: "Tailwind logo" },
-    { image: supabase, text: "Supabase", alt: "Supabase logo" },
-    { image: FIGMA, text: "Figma", alt: "Figma logo" },
-    { image: GITHUB, text: "GitHub", alt: "GitHub logo" },
-    { image: N8N, text: "n8n", alt: "n8n logo" },
-    { image: EXPRESS, text: "Express", alt: "express logo", className: "bg-white rounded-full" },
-    { image: typescript, text: "TypeScript", alt: "TypeScript logo" },
-    { image: HTML5, text: "HTML5", alt: "HTML5 logo" },
-    { image: GIT, text: "Git", alt: "Git logo" },
-]
+const otherSkills = [
+  {
+    title: 'Figma',
+    description:
+      'figma.description',
+    image: FIGMA,
+  },
+  {
+    title: 'GitHub',
+    description:
+      'gitHub.description',
+    image: GITHUB,
+  },
+  {
+    title: 'n8n',
+    description:
+      'n8n.description',
+    image: N8N,
+  },
+];
 
 export const ToolsPage = () => {
+  const t = useTranslations('tools')
 
-    const t = useTranslations()
+  return (
+    <section className='bg-red-500'>
+      {/* Header */}
+      <TitlePage title="tools.title" />
+      <PageContainer>
+        <div className="flex justify-center items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-12 items-stretch">
+            {otherSkills.map(({ image, description, title }) => (
+              <div
+                key={title}
+                className="w-full max-w-80 h-full rounded-xl bg-[#1C1C1C] relative hover:rotate-2 duration-300"
+              >
+                <div className="absolute top-4 right-full bg-primary h-16 w-2 rounded-l-full" />
 
-    return (
-        <section className='relative'>
-            <TitlePage title="common.titleTools" />
-            <PageContainer>
-                <div
-                    className="grid grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-4 gap-y-12"
-                >
-                    {tools.map((tool, i) => (
-                        <Tool key={i} {...tool} />
-                    ))}
+                <div className="p-4 space-y-2 relative flex flex-col h-full">
+                  <div className="bg-[#292929] p-2 rounded-full w-18 h-18 flex justify-center items-center">
+                    <div className="min-w-16 min-h-16 relative rounded-full">
+                      <Image src={image} fill alt={`${title} logo`} className="object-cover" />
+                    </div>
+                  </div>
+
+                  <h2 className="text-xl font-bold">{title}</h2>
+
+                  <p className="text-sm mt-auto">
+                    {t(description)}
+                  </p>
                 </div>
-            </PageContainer>
-        </section>
-    )
+              </div>
+            ))}
+          </div>
+        </div>
+      </PageContainer>
+    </section>
+  );
 }

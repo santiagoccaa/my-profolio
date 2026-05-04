@@ -2,7 +2,8 @@
     "common": {
         "tools": "Developed with",
         "donwload": "Dowload CV",
-        "titleTools":"Tools"
+        "titleTools": "Tools",
+        "knowledge": "Knowledges"
     },
     "hero": {
         "title": "Software Engineer"

@@ -2,7 +2,8 @@
     "common": {
         "tools": "Desarrollado con",
         "donwload": "Descargar CV",
-        "titleTools":"Herramientas"
+        "titleTools":"Herramientas",
+        "knowledge":"Conocimientos"
     },
     "hero": {
         "title": "Ingeniero de software"
