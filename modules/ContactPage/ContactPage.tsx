@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl"
 import { BiLogoGmail, BiSend } from "react-icons/bi"
 import { FaWhatsapp } from "react-icons/fa6"
 import { LuLinkedin } from "react-icons/lu"
-import { getEmailHref } from "../Hero/Social"
+import { getEmailHref } from "../HomePage/components/Hero/Social"
 import { LINKEDIN } from "@/constants/profile/santiago"
 import { useState } from "react"
 
@@ -33,7 +33,7 @@ const contacts = [
   }
 ]
 
-export const Contact = () => {
+export const ContactPage = () => {
   const t = useTranslations('contact')
 
   const [isLoading, setIsLoading] = useState(false)

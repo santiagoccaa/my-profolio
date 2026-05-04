@@ -25,7 +25,7 @@ const tools = [
     { image: GIT, text: "Git", alt: "Git logo" },
 ]
 
-export const Tools = () => {
+export const ToolsPage = () => {
 
     const t = useTranslations()
 

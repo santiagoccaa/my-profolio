@@ -7,7 +7,7 @@ import { AnimatedText, MotionTransition } from "@/components/Transition"
 import { useTranslations } from "next-intl"
 import Image from "next/image"
 
-export const About = () => {
+export const AboutPage = () => {
     const t = useTranslations()
     return (
         <section id="projects" className='relative'>

@@ -45,7 +45,7 @@ const services: CardServicesProps[] = [
     ],
   },
 ];
-export const Services = () => {
+export const ServicesPage = () => {
   const t = useTranslations('services')
   return (
     <section id="projects" className='relative bg-blue-200'>

@@ -42,7 +42,7 @@ const projectsData: Projects[] = [
     }
 ] as const
 
-export const Projects = () => {
+export const ProjectsPage = () => {
     const t = useTranslations()
     return (
         <section className='relative  bg-blue-200'>

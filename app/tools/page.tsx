@@ -1,5 +1,5 @@
-import { Tools } from '@/module/HomePage/components'
+import { ToolsPage } from "@/modules";
 
-export default function page() {
-    return <Tools />
+export default function Tools() {
+    return <ToolsPage />
 }

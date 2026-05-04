@@ -1,5 +1,5 @@
-import { About } from '@/module/HomePage/components'
+import { AboutPage } from "@/modules";
 
-export default function page() {
-    return <About />
+export default function About() {
+    return <AboutPage />
 }
