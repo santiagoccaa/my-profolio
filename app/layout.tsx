@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Saira } from "next/font/google";
 import "./globals.css";
-import GridScreen from "@/module/HomePage/components/Hero/GridScreen";
-import { Figuras, Modal, NavLang } from "@/components";
+import { Figuras, GridBox, Modal, NavLang } from "@/components";
 import Navbar from "@/components/Navbar/Navbar";
 import { getLocale } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
@@ -31,7 +30,7 @@ export default async function RootLayout({
         className={`${fredoka.className} relative floating`}
       >
         <NextIntlClientProvider>
-          <GridScreen />
+          <GridBox />
           <Modal />
           <Figuras />
           <NavLang />

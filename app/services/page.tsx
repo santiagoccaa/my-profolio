@@ -1,5 +1,5 @@
-import { Services } from '@/module/HomePage/components'
+import { ServicesPage } from "@/modules";
 
-export default function page() {
-  return <Services />
+export default function Services() {
+  return <ServicesPage />
 }
