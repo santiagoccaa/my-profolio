@@ -1,5 +1,5 @@
-import Skills from '@/module/HomePage/components/Skills/Skills'
+import { SkillsPage } from "@/modules";
 
-export default function page() {
-    return <Skills />
+export default function Skills() {
+    return <SkillsPage />
 }

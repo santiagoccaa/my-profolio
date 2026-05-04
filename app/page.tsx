@@ -1,4 +1,4 @@
-import { HomePage } from "@/module/HomePage";
+import { HomePage } from "@/modules";
 
 export default function Home() {
   return <HomePage />

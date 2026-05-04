@@ -25,7 +25,7 @@ const otherSkills = [
   },
 ];
 
-export default function Skills() {
+export const SkillsPage = () => {
   const t = useTranslations('tools')
 
   return (

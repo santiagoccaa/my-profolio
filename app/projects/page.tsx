@@ -1,5 +1,5 @@
-import { Projects } from '@/module/HomePage/components'
+import { ProjectsPage } from "@/modules";
 
-export default function page() {
-    return <Projects />
+export default function Projects() {
+    return <ProjectsPage />
 }

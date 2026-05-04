@@ -1,4 +1,4 @@
-import { Hero, } from './components'
+import { Hero } from './components'
 
 export function HomePage() {
     return <Hero />
