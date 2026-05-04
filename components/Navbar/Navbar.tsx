@@ -26,13 +26,13 @@ const nav = [
         icon: <MdPersonSearch />
     },
     {
-        name: 'skills',
-        href: '/skills',
+        name: 'tools',
+        href: '/tools',
         icon: <GiSkills />
     },
     {
-        name: 'tools',
-        href: '/tools',
+        name: 'knowledge',
+        href: '/knowledge',
         icon: <SiXdadevelopers />
     },
     {
