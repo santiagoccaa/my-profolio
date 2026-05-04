@@ -33,7 +33,6 @@ export default async function RootLayout({
           <GridBox />
           <Modal />
           <Figuras />
-          <NavLang />
           <main className="min-h-screen shadow-2xl">
             {children}
             <Navbar />

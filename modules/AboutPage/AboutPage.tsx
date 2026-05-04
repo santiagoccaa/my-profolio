@@ -1,4 +1,4 @@
-import { PageContainer } from "@/components"
+import { PageContainer, TitlePage } from "@/components"
 import { Items } from "./Items"
 import { LuDownload } from "react-icons/lu"
 import { MdArrowForward } from "react-icons/md"
@@ -11,12 +11,7 @@ export const AboutPage = () => {
     const t = useTranslations()
     return (
         <section id="projects" className='relative'>
-            <div className='flex justify-between w-full'>
-                <div className='flex gap-2 items-center w-full justify-end'>
-                    <span className='w-10 lg:w-full max-w-1/2 h-px bg-white' />
-                    <AnimatedText key={t('aboutMe.title')} text={t('aboutMe.title')} className="text-sm uppercase tracking-[0.4em]" />
-                </div>
-            </div>
+            <TitlePage title="aboutMe.title" />
 
             <div className="absolute hidden bottom-32 md:top-1/2 md:-translate-y-1/2 left-0 bg-linear-to-b from-[#0D1117] via-secondary to-[#0D1117] w-full md:w-[30%] h-44 opacity-60" />
             <PageContainer>
