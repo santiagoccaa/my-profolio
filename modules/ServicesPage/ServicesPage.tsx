@@ -6,23 +6,25 @@ export interface CardServicesProps {
   title: string,
   image: string,
   description: string,
+  subtitle: string
 }
 const services: CardServicesProps[] = [
   {
     title: "automatizacion.title",
+    subtitle: "automatizacion.subtitle",
     description: "automatizacion.description",
     image: AUTOMATIZACION,
-
   },
   {
     title: "webDesign.title",
-    description: "webDesign.description",
+    subtitle: "webDesign.subtitle",
+    description: "automatizacion.description",
     image: STYLE,
-
   },
   {
     title: "backendWeb.title",
-    description: "backendWeb.description",
+    subtitle: "backendWeb.subtitle",
+    description: "automatizacion.description",
     image: BACKEND,
   },
 ];
