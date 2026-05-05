@@ -23,24 +23,15 @@
         "title": "Services",
         "automatizacion": {
             "title": "Automation",
-            "description": "I automate processes so your business saves time and reduces errors.",
-            "item1": "Less manual work and more efficiency",
-            "item2": "Clear processes that run on their own",
-            "item3": "More time to focus on selling and growing"
+            "description": "I identify the repetitive tasks in your business and automate them — whether through scripts, tool integrations, or workflows. Fewer clicks, fewer errors, more time for what actually matters."
         },
         "webDesign": {
             "title": "Web Design",
-            "description": "I design websites that not only look great, but communicate trust and turn visitors into customers.",
-            "item1": "Design aligned with your brand and goals",
-            "item2": "Clear, simple, and easy-to-use experience",
-            "item3": "Built to capture, convince, and convert"
+            "description": "Your website is often the first contact someone has with your business. I design pages that instantly convey credibility, with a clear structure that guides visitors exactly where you want them to go."
         },
         "backendWeb": {
             "title": "Backend Web",
-            "description": "I develop the internal side of your application so it runs fast and stays secure.",
-            "item1": "Stable and well-structured systems",
-            "item2": "Ready to support more users",
-            "item3": "Fewer technical issues, more peace of mind"
+            "description": "I handle the logic, databases, and APIs that power your application. The result: a scalable, secure system that supports your business growth without surprises."
         }
     },
     "aboutMe": {
