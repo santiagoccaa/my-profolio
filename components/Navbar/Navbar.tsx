@@ -48,7 +48,7 @@ const Navbar = () => {
     const pathName = usePathname()
     if (pathName === '/') return
     return (
-        <div className="w-full bg-red-100 mt-10 pb-4 flex justify-center">
+        <div className="w-full mt-10 pb-4 flex justify-center">
             <div className='w-fit'>
                 <div className="relative bg-neutral-800 rounded-full px-2 py-2 flex gap-2 shadow-lg">
                     <span

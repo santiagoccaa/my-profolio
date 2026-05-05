@@ -64,8 +64,9 @@ export const ContactPage = () => {
 
   return (
     <section id="projects" className='relative'>
-      <TitlePage title="contact.title" />
       <PageContainer>
+        <TitlePage title="contact.title" />
+
         <div className="flex flex-col md:flex-row mt-4">
           <div className="w-full md:w-1/2">
             <div className="w-72">

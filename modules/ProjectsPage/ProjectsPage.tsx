@@ -45,10 +45,11 @@ const projectsData: Projects[] = [
 export const ProjectsPage = () => {
     const t = useTranslations()
     return (
-        <section className='relative  bg-blue-200'>
+        <section className='relative'>
             {/* Title */}
-            <TitlePage title="projects.title" />
             <PageContainer>
+                <TitlePage title="projects.title" />
+
                 {/* Cards projects */}
                 <div className="flex flex-col lg:flex-row items-center gap-x-16 gap-y-4 justify-center w-full">
                     {projectsData.map((project) => (
