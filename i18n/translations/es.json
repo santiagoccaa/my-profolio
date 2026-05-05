@@ -3,7 +3,8 @@
         "tools": "Desarrollado con",
         "donwload": "Descargar CV",
         "titleTools": "Herramientas",
-        "knowledge": "Conocimientos"
+        "knowledge": "Conocimientos",
+        "contact": "Contactame"
     },
     "hero": {
         "title": "Ingeniero de software"
@@ -42,9 +43,9 @@
             "title1": "Ingeniero de Software",
             "description1": "Soy egresado de Ingeniería de Software de la Universidad de Cartagena. Mi formación académica me brindó una base sólida en programación, diseño de sistemas y resolución de problemas.",
             "title2": "Aprendizaje Continuo",
-            "description2": "He perfeccionado mis habilidades a través de cursos en línea, proyectos autodidactas y experimentación práctica. Cada desafío me ha ayudado a crecer como desarrollador y como profesional.",
+            "description2": " He perfeccionado mis habilidades a través de cursos en línea, proyectos autodidactas y experimentación práctica. Cada desafío me ha ayudado a crecer como desarrollador y como profesional.",
             "title3": "Experiencia",
-            "description3": "Realicé prácticas profesionales en un par de empresas. También he desarrollado y contribuido a varios proyectos independientes que fortalecieron mis habilidades técnicas y de trabajo en equipo."
+            "description3": "Realicé prácticas profesionales en ITGlobers. También he desarrollado y contribuido a varios proyectos independientes que fortalecieron mis habilidades técnicas y de trabajo en equipo."
         }
     },
     "tools": {
