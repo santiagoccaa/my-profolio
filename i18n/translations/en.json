@@ -3,7 +3,8 @@
         "tools": "Developed with",
         "donwload": "Dowload CV",
         "titleTools": "Tools",
-        "knowledge": "Knowledges"
+        "knowledge": "Knowledges",
+        "contact": "Contact me"
     },
     "hero": {
         "title": "Software Engineer"
@@ -44,7 +45,7 @@
             "title2": "Continuous Learning ",
             "description2": "I’ve refined my skills through online courses, self-driven projects, and hands-on experimentation. Each challenge has helped me grow as both a developer and a thinker.",
             "title3": "Experience",
-            "description3": "I completed internships at a couple of companies. I’ve also built and contributed to several independent projects that strengthened my and teamwork abilities."
+            "description3": "I completed an internship at ITGlobers. I have also developed and contributed to several independent projects that strengthened my individual and teamwork skills."
         }
     },
     "tools": {
