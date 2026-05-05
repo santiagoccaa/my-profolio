@@ -33,8 +33,9 @@ export const ServicesPage = () => {
 
   return (
     <section id="projects" className='relative'>
-      <TitlePage title="services.title" />
       <PageContainer>
+        <TitlePage title="services.title" />
+
         <div className="flex justify-center items-center">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 gap-y-20 items-center justify-center mt-12">
             {services.map((service, index) => (
