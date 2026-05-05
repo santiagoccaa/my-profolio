@@ -33,8 +33,10 @@ export default async function RootLayout({
           <GridBox />
           <Modal />
           <Figuras />
-          <main className="min-h-screen shadow-2xl">
-            {children}
+          <main className="min-h-screen flex flex-col shadow-2xl">
+            <div className="flex-1">
+              {children}
+            </div>
             <Navbar />
           </main>
         </NextIntlClientProvider>

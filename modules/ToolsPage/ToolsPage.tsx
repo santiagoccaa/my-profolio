@@ -28,11 +28,11 @@ export const ToolsPage = () => {
   const t = useTranslations('tools')
 
   return (
-    <section className='bg-red-500'>
-      {/* Header */}
-      <TitlePage title="tools.title" />
-      <PageContainer>
-        <div className="flex justify-center items-center">
+    <PageContainer>
+      <section className="h-full w-full">
+        {/* Header */}
+        <TitlePage title="tools.title" />
+        <div className="flex justify-center pt-10 items-center">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-12 items-stretch">
             {otherSkills.map(({ image, description, title }) => (
               <div
@@ -58,7 +58,7 @@ export const ToolsPage = () => {
             ))}
           </div>
         </div>
-      </PageContainer>
-    </section>
+      </section>
+    </PageContainer>
   );
 }
