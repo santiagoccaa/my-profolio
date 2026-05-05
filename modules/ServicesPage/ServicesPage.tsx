@@ -6,47 +6,31 @@ export interface CardServicesProps {
   title: string,
   image: string,
   description: string,
-  items: string[]
 }
 const services: CardServicesProps[] = [
   {
     title: "automatizacion.title",
-    description:
-      "automatizacion.description",
+    description: "automatizacion.description",
     image: AUTOMATIZACION,
-    items: [
-      "automatizacion.item1",
-      "automatizacion.item2",
-      "automatizacion.item3"
-    ],
+
   },
   {
     title: "webDesign.title",
-    description:
-      "webDesign.description",
+    description: "webDesign.description",
     image: STYLE,
-    items: [
-      "webDesign.item1",
-      "webDesign.item2",
-      "webDesign.item3"
-    ],
+
   },
   {
     title: "backendWeb.title",
-    description:
-      "backendWeb.description",
+    description: "backendWeb.description",
     image: BACKEND,
-    items: [
-      "backendWeb.item1",
-      "backendWeb.item2",
-      "backendWeb.item3"
-    ],
   },
 ];
+
 export const ServicesPage = () => {
 
   return (
-    <section id="projects" className='relative bg-blue-200'>
+    <section id="projects" className='relative'>
       <TitlePage title="services.title" />
       <PageContainer>
         <div className="flex justify-center items-center">
