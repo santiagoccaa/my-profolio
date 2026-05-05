@@ -2,8 +2,8 @@
     "common": {
         "tools": "Desarrollado con",
         "donwload": "Descargar CV",
-        "titleTools":"Herramientas",
-        "knowledge":"Conocimientos"
+        "titleTools": "Herramientas",
+        "knowledge": "Conocimientos"
     },
     "hero": {
         "title": "Ingeniero de software"
@@ -23,24 +23,18 @@
         "title": "Servicios",
         "automatizacion": {
             "title": "Automatización",
-            "description": "Automatizo procesos para que tu negocio ahorre tiempo, reduzca y errores.",
-            "item1": "Menos trabajo manual y más eficiencia",
-            "item2": "Procesos claros que se ejecutan solos",
-            "item3": "Más tiempo para enfocarte en vender y crecer"
+            "subtitle":"¿Sientes que pierdes tiempo en tareas repetitivas que podrían hacerse solas?",
+            "description": "Automatizo procesos clave de tu negocio con integraciones y flujos inteligentes, para que reduzcas errores, ahorres tiempo y puedas enfocarte en lo que realmente genera ingresos."
         },
         "webDesign": {
             "title": "Web Design",
-            "description": "Diseño sitios web que no solo se ven bien, sino que comunican confianza y convierten visitantes en clientes.",
-            "item1": "Diseño alineado con tu marca y objetivos",
-            "item2": "Experiencia clara, simple y fácil de usar",
-            "item3": "Pensado para captar, convencer y convertir    "
+            "subtitle":"¿Tu sitio web no está generando resultados?",
+            "description": "Diseño páginas que no solo se ven bien, sino que están pensadas para guiar al usuario y convertir visitas en clientes. Claridad, confianza y una experiencia que impulsa tu negocio desde el primer clic."
         },
         "backendWeb": {
             "title": "Backend Web",
-            "description": "Desarrollo la parte interna de tu aplicación para que funcione rápido y sea segura.",
-            "item1": "Sistemas estables y bien organizados",
-            "item2": "Preparado para soportar más usuarios",
-            "item3": "Menos problemas técnicos, más tranquilidad"
+            "subtitle":"¿Necesitas una aplicación sólida que no falle cuando crezca tu negocio?",
+            "description": "Desarrollo la arquitectura, APIs y bases de datos que garantizan rendimiento, seguridad y escalabilidad, para que tu plataforma funcione sin límites ni dolores de cabeza."
         }
     },
     "aboutMe": {
@@ -70,9 +64,9 @@
     },
     "contact": {
         "title": "Contacto",
-        "subtitle":"Envia un mensaje",
+        "subtitle": "Envia un mensaje",
         "inputEmail": "email@ejemplo.com",
         "inputText": "Que quieres saber...",
-        "button":"Enviar"
+        "button": "Enviar"
     }
 }

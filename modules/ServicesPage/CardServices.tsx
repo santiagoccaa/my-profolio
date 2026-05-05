@@ -1,8 +1,9 @@
 import Image from "next/image"
-import { TbPointFilled } from "react-icons/tb"
-import { CardServicesProps } from "./Services"
 import { useTranslations } from "next-intl"
 import { MotionTransition } from "@/components/Transition"
+import { CardServicesProps } from "./ServicesPage"
+import Link from "next/link"
+import { FiArrowUpRight } from "react-icons/fi"
 
 const CardServices = (service: CardServicesProps) => {
     const t = useTranslations('services')
@@ -12,27 +13,30 @@ const CardServices = (service: CardServicesProps) => {
         >
             <div
                 key={service.title}
-                className="w-full max-w-80 md:w-72 h-76 relative rounded-sm bg-black-secondary flex flex-col"
+                className="w-full min-h-85 max-w-80 relative rounded-xl flex flex-col items-center overflow-hidden bg-black-light p-4 text-white shadow-xl hover:-translate-y-2 hover:scale-105 opacity-90 hover:opacity-100 duration-300"
             >
-                <div className="w-28 h-28 rounded-full bg-black-light p-2 absolute bottom-[90%] left-1/2 -translate-x-1/2 z-20">
-                    <div className="w-full h-full relative rounded-full bg-black-light">
+                <div className="w-full aspect-square rounded-full bg-primary shadow-2xl -top-55 absolute" />
+                <div className="w-20 h-20 rounded-full">
+                    <div className="w-full h-full relative rounded-full">
                         <Image src={service.image} fill alt="logo" className="object-cover" />
                     </div>
                 </div>
 
-                <div className="max-h-35 min-h-35 rounded-t-sm bg-linear-to-b from-primary to-secondary w-full flex flex-col items-center justify-end pb-4 shadow-2xl overflow-hidden relative z-0">
+                <div className="min-h-28 text-center mt-5">
                     <h2 className="text-xl font-bold">{t(service.title)}</h2>
-                    <p className="text-sm text-white/80 px-4 mt-1 text-center">
+                    <div className="h-px bg-linear-to-r from-primary via-black-light to-primary mb-2 mt-4 rounded-full w-full" />
+
+                    {/* <h2 className="text-sm font-bold">{t(service.subtitle)}</h2> */}
+                    
+                    <p className="text-sm mt-1">
                         {t(service.description)}
                     </p>
                 </div>
 
-                <div className="w-full flex-1 flex flex-col items-stretch p-4">
-                    <ul className="space-y-2">
-                        {service.items.map((item, index) => (
-                            <li key={index} className="text-sm font-medium flex items-center"><TbPointFilled /> {t(item)}</li>
-                        ))}
-                    </ul>
+                <div className="text-left mt-6 w-full flex items-end flex-1">
+                    <Link href={"/"} className="text-sm flex items-center p-2 hover:bg-primary rounded-full gap-2 text-white duration-300">
+                        Saber mas <FiArrowUpRight size={20} />
+                    </Link>
                 </div>
             </div>
         </MotionTransition>
