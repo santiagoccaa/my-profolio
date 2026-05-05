@@ -23,15 +23,15 @@
         "title": "Services",
         "automatizacion": {
             "title": "Automation",
-            "description": "I identify the repetitive tasks in your business and automate them — whether through scripts, tool integrations, or workflows. Fewer clicks, fewer errors, more time for what actually matters."
+            "description": "I automate key processes in your business through smart integrations and workflows, helping you reduce errors, save time, and focus on what truly drives revenue."
         },
         "webDesign": {
             "title": "Web Design",
-            "description": "Your website is often the first contact someone has with your business. I design pages that instantly convey credibility, with a clear structure that guides visitors exactly where you want them to go."
+            "description": "I design websites that not only look great, but are built to guide users and turn visitors into customers. Clarity, trust, and an experience that drives your business from the very first click."
         },
         "backendWeb": {
-            "title": "Backend Web",
-            "description": "I handle the logic, databases, and APIs that power your application. The result: a scalable, secure system that supports your business growth without surprises."
+            "title": "Backend Development",
+            "description": "I build the architecture, APIs, and databases that ensure performance, security, and scalability, so your platform runs smoothly without limits or headaches."
         }
     },
     "aboutMe": {
