@@ -36,7 +36,7 @@ export const KnowledgePage = () => {
                     className="grid grid-cols-4 md:grid-cols-5 lg:grid-cols-5 place-items-center gap-4 gap-y-12 pt-10"
                 >
                     {tools.map((tool, i) => (
-                        <Tool key={i} {...tool} />
+                        <Tool key={i} {...tool} duration={i} />
                     ))}
                 </div>
             </PageContainer>
