@@ -14,7 +14,7 @@ export const AboutPage = () => {
 
             <div className="absolute hidden bottom-32 md:top-1/2 md:-translate-y-1/2 left-0 bg-linear-to-b from-[#0D1117] via-secondary to-[#0D1117] w-full md:w-[30%] h-44 opacity-60" />
             <PageContainer>
-            <TitlePage title="aboutMe.title" />
+                <TitlePage title="aboutMe.title" />
 
                 <div className="flex flex-col-reverse md:flex-row md:gap-x-4 lg:gap-x-20 gap-y-8 items-center justify-center">
                     <div className="relative w-full lg:w-1/2 flex items-end justify-end">
@@ -50,12 +50,14 @@ export const AboutPage = () => {
                         </MotionTransition>
                         <Items />
                         {/* button para ver mas TODO */}
-                        <div className="relative mt-8">
-                            <div className="w-32 h-14 absolute left-4 -top-1 border-2 border-secondary rounded-xs inset-0" />
-                            <Link href={"/about"} aria-label="learn more" className="relative w-34 h-12 rounded-xs bg-secondary font-bold flex items-center justify-center gap-2 cursor-pointer shadow-2xl active:scale-95 duration-300 text-md group">
-                                {t('common.contact')} <MdArrowForward size={20} className="group-hover:translate-x-2 duration-300" />
-                            </Link>
-                        </div>
+                        <MotionTransition position="left">
+                            <div className="relative mt-8">
+                                <div className="w-32 h-14 absolute left-4 -top-1 border-2 border-secondary rounded-xs inset-0" />
+                                <Link href={"/about"} aria-label="learn more" className="relative w-34 h-12 rounded-xs bg-secondary font-bold flex items-center justify-center gap-2 cursor-pointer shadow-2xl active:scale-95 duration-300 text-md group">
+                                    {t('common.contact')} <MdArrowForward size={20} className="group-hover:translate-x-2 duration-300" />
+                                </Link>
+                            </div>
+                        </MotionTransition>
                     </div>
                 </div>
             </PageContainer>
