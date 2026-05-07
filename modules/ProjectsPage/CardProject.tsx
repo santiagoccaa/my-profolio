@@ -1,6 +1,5 @@
 "use client"
 
-import { HiArrowsPointingOut } from 'react-icons/hi2'
 import { MotionTransition } from "@/components/Transition"
 import { usePorfolioStore } from "@/store/contextPorpofolio"
 import Image from "next/image"
@@ -18,7 +17,11 @@ const CardProject = (project: Projects) => {
                 }`}
         >
             <div
-                className="w-64 h-110 rounded-md shadow-sm overflow-hidden group hover:-translate-y-2 hover:shadow-2xl duration-300 relative"
+                onClick={() => {
+                    setOpenModal(true)
+                    setProject(project.project)
+                }}
+                className="w-64 h-110 rounded-md shadow-sm overflow-hidden group hover:-translate-y-2 hover:shadow-2xl duration-300 relative cursor-pointer"
             >
                 <div className={`w-full h-full relative`}>
                     <Image
@@ -39,16 +42,6 @@ const CardProject = (project: Projects) => {
                         </h2>
                         <h2 className="text-2xl font-medium">{project.title}</h2>
                     </div>
-                    <button
-                        aria-label={`open modal project ${project.id}`}
-                        onClick={() => {
-                            setOpenModal(true)
-                            setProject(project.project)
-                        }}
-                        className={` text-xl p-1 rounded-full text-black bg-white top-3 hover:shadow-2xl cursor-pointer duration-300 group`}
-                    >
-                        <HiArrowsPointingOut className="group-hover:scale-105 duration-300" />
-                    </button>
                 </div>
 
             </div>

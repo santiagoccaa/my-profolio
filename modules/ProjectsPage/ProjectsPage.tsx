@@ -1,6 +1,6 @@
 import { PageContainer, TitlePage } from "@/components"
-import { AnimatedText, MotionPosition } from "@/components/Transition";
-import { PROJECT_TASTENEST, PROJECT_VOYAGGI } from "@/constants/images/images"
+import { MotionPosition } from "@/components/Transition";
+import { PROJECT_ACADEMY, PROJECT_TASTENEST, PROJECT_VOYAGGI } from "@/constants/images/images"
 import { academy, ProjectPorfolio, tasteNest, voyaggi } from "@/constants/projects"
 import CardProject from "./CardProject";
 import { useTranslations } from "next-intl";
@@ -11,8 +11,6 @@ export interface Projects {
     type: string,
     image: string,
     project: ProjectPorfolio,
-    polygonClass: string,
-    cardHeight: string,
     align: string,
     position: MotionPosition,
 }
@@ -24,8 +22,6 @@ const projectsData: Projects[] = [
         type: 'Front end',
         image: PROJECT_TASTENEST,
         project: tasteNest,
-        polygonClass: 'polygon1',
-        cardHeight: 'h-120',
         align: 'left',
         position: "left"
     },
@@ -35,10 +31,17 @@ const projectsData: Projects[] = [
         type: 'Full stack',
         image: PROJECT_VOYAGGI,
         project: voyaggi,
-        polygonClass: 'polygon2',
-        cardHeight: 'h-110',
         align: 'right',
         position: "top"
+    },
+    {
+        id: 'academy',
+        title: 'Academy LMS',
+        type: 'Full stack',
+        image: PROJECT_ACADEMY,
+        project: academy,
+        align: 'right',
+        position: "right"
     }
 ] as const
 
