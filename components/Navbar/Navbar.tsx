@@ -9,33 +9,38 @@ import { MdConnectWithoutContact, MdMiscellaneousServices, MdPersonSearch } from
 import { SiXdadevelopers } from "react-icons/si"
 
 const nav = [
-
     {
+        position: 0,
         name: 'projects',
         href: '/projects',
         icon: <GrProjects />
     },
     {
+        position: 1,
         name: 'services',
         href: '/services',
         icon: <MdMiscellaneousServices />
     },
     {
+        position: 2,
         name: 'about',
         href: '/about',
         icon: <MdPersonSearch />
     },
     {
+        position: 3,
         name: 'tools',
         href: '/tools',
         icon: <GiSkills />
     },
     {
+        position: 4,
         name: 'knowledge',
         href: '/knowledge',
         icon: <SiXdadevelopers />
     },
     {
+        position: 5,
         name: 'contact',
         href: '/contact',
         icon: <MdConnectWithoutContact />
@@ -43,9 +48,14 @@ const nav = [
 ]
 
 const Navbar = () => {
-    const [active, setActive] = useState(0)
-
     const pathName = usePathname()
+
+    const positionInitial = nav.filter((item) => item.href === pathName)
+
+    const position = positionInitial[0].position
+
+    const [active, setActive] = useState(position)
+
     if (pathName === '/') return
     return (
         <div className="w-full mt-10 pb-4 flex justify-center">
@@ -58,9 +68,9 @@ const Navbar = () => {
                         }}
                     />
                     {
-                        nav.map(({ href, icon }, index) => (
-                            <Link key={index} href={href} onClick={() => setActive(index)}
-                                className={`relative z-10 min-w-10 h-10 rounded-full flex items-center justify-center text-sm font-medium transition-colors duration-300 cursor-pointer ${active === index ? "text-white" : "text-primary"} text-xl`}>
+                        nav.map(({ href, position, icon }, index) => (
+                            <Link key={index} href={href} onClick={() => setActive(position)}
+                                className={`relative z-10 min-w-10 h-10 rounded-full flex items-center justify-center text-sm font-medium transition-colors duration-300 cursor-pointer ${position === index ? "text-white" : "text-primary"} text-xl`}>
                                 {icon}
                             </Link>
                         ))
