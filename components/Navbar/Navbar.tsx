@@ -50,11 +50,14 @@ const nav = [
 const Navbar = () => {
     const pathName = usePathname()
 
+    if (pathName === "/") {
+        return null
+    }
     const positionInitial = nav.filter((item) => item.href === pathName)
 
     const position = positionInitial[0].position
 
-    const [active, setActive] = useState(position)
+    const [active, setActive] = useState<number>(position)
 
     if (pathName === '/') return
     return (
