@@ -65,6 +65,12 @@
         "subtitle": "Send Message",
         "inputEmail": "email@explame.com",
         "inputText": "Question...",
-        "button": "Send"
+        "inputName": "Your name",
+        "button": "Send",
+        "formErrorMessages": {
+            "email": "Email invalid",
+            "name": "Name required",
+            "message": "Message required"
+        }
     }
 }
