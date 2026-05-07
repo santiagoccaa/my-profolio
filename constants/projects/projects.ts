@@ -1,5 +1,5 @@
 import { EXPRESS, FIGMA, MONGODB, nextJs, react, typescript, openai, PRISMa, CLERK } from "../icons/icons"
-import { MODAL_VOYAGGI, PROJECT_TASTENEST } from "../images/images"
+import { MODAL_VOYAGGI, PROJECT_ACADEMY, PROJECT_TASTENEST } from "../images/images"
 import { LINK_TASTENEST, LINK_VOYAGGI } from "../images/links"
 
 export interface ProjectPorfolio {
@@ -31,10 +31,12 @@ export const voyaggi: ProjectPorfolio = {
 } as const
 
 export const academy: ProjectPorfolio = {
-    image: PROJECT_TASTENEST,
+    image: PROJECT_ACADEMY,
     name: "Academy LMS",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ipsum ducimus adipisci est voluptatibus. Non odit repellat dignissimos fugit quis, debitis obcaecati maiores eveniet accusantium iusto consequuntur recusandae, saepe accusamus?",
-    description2: "",
+    description: "academy.text1",
+    description2: "academy.text2",
     tecnologis: [nextJs, typescript, react, PRISMa, CLERK],
     link: LINK_TASTENEST
 }
+
+

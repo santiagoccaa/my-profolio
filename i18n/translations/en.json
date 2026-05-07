@@ -18,6 +18,10 @@
         "tasteNest": {
             "text1": "Conceptual web design project for a restaurant, focused on visual experience and navigation structure.",
             "text2": "The proposal features sections such as Home, Menu, and About, with an emphasis on layout, typography, and visual hierarchy. The project is purely demonstrative and does not include real functionality."
+        },
+        "academy": {
+            "text1": "Academy is a learning platform created to demonstrate skills in interface design, frontend architecture, and full-stack development.",
+            "text2": "The project includes authentication, course management, playback of educational content, learning progress tracking, and a modern user experience built with advanced technologies."
         }
     },
     "services": {
