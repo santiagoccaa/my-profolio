@@ -4,7 +4,7 @@ import { HiArrowsPointingOut } from 'react-icons/hi2'
 import { MotionTransition } from "@/components/Transition"
 import { usePorfolioStore } from "@/store/contextPorpofolio"
 import Image from "next/image"
-import { Projects } from './Projects'
+import { Projects } from './ProjectsPage'
 
 const CardProject = (project: Projects) => {
 
