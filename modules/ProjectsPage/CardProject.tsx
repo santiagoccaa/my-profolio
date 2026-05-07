@@ -18,26 +18,20 @@ const CardProject = (project: Projects) => {
                 }`}
         >
             <div
-                className="w-64 h-110 rounded-md shadow-sm overflow-hidden relative group hover:-translate-y-2 hover:shadow-2xl duration-300"
+                className="w-64 h-110 rounded-md shadow-sm overflow-hidden group hover:-translate-y-2 hover:shadow-2xl duration-300 relative"
             >
-                {/* Overlay */}
-                <div className={`h-full lg:h-0 w-full absolute bottom-0 left-0 group-hover:h-110 duration-300 overflow-hidden bg-black opacity-60`} />
-                <div
-                    className={` transition-all duration-700 w-72 h-96 relative group`}
-                >
-                    <div className={`w-72 h-110 absolute top-0 left-0`}>
-                        <Image
-                            src={project.image}
-                            fill
-                            alt={project.title}
-                            className="object-cover"
-                        />
-                    </div>
+                <div className={`w-full h-full relative`}>
+                    <Image
+                        src={project.image}
+                        fill
+                        alt={project.title}
+                        className="object-cover"
+                    />
                 </div>
 
                 {/* Footer */}
                 <div
-                    className='absolute group-hover:bg-primary bottom-0 left-0 w-full flex items-center justify-between p-4 transition-colors duration-300'
+                    className='absolute bg-primary bottom-0 left-0 w-full flex items-center justify-between p-4 transition-colors duration-300'
                 >
                     <div>
                         <h2 className="text-xs uppercase tracking-[0.25em]">
