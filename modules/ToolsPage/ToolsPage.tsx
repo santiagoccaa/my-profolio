@@ -1,4 +1,5 @@
 import { PageContainer, TitlePage } from "@/components";
+import { MotionTransition } from "@/components/Transition";
 import { FIGMA, GITHUB, N8N } from "@/constants/icons/icons";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
@@ -35,26 +36,27 @@ export const ToolsPage = () => {
         <div className="flex justify-center pt-10 items-center">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-12 items-stretch">
             {otherSkills.map(({ image, description, title }) => (
-              <div
-                key={title}
-                className="w-full max-w-80 h-full rounded-xl bg-[#1C1C1C] relative hover:rotate-2 duration-300"
-              >
-                <div className="absolute top-4 right-full bg-primary h-16 w-2 rounded-l-full" />
+              <MotionTransition position="top" key={title}>
+                <div
+                  className="w-full max-w-80 h-full rounded-xl bg-[#1C1C1C] relative hover:rotate-2 duration-300"
+                >
+                  <div className="absolute top-4 right-full bg-primary h-16 w-2 rounded-l-full" />
 
-                <div className="p-4 space-y-2 relative flex flex-col h-full">
-                  <div className="bg-[#292929] p-2 rounded-full w-18 h-18 flex justify-center items-center">
-                    <div className="min-w-16 min-h-16 relative rounded-full">
-                      <Image src={image} fill alt={`${title} logo`} className="object-cover" />
+                  <div className="p-4 space-y-2 relative flex flex-col h-full">
+                    <div className="bg-[#292929] p-2 rounded-full w-18 h-18 flex justify-center items-center">
+                      <div className="min-w-16 min-h-16 relative rounded-full">
+                        <Image src={image} fill alt={`${title} logo`} className="object-cover" />
+                      </div>
                     </div>
+
+                    <h2 className="text-xl font-bold">{title}</h2>
+
+                    <p className="text-sm mt-auto">
+                      {t(description)}
+                    </p>
                   </div>
-
-                  <h2 className="text-xl font-bold">{title}</h2>
-
-                  <p className="text-sm mt-auto">
-                    {t(description)}
-                  </p>
                 </div>
-              </div>
+              </MotionTransition>
             ))}
           </div>
         </div>
