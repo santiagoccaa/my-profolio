@@ -1,14 +1,12 @@
-'use client'
 
 import { PageContainer, TitlePage } from "@/components"
-import { AnimatedText } from "@/components/Transition"
 import { useTranslations } from "next-intl"
 import { BiLogoGmail, BiSend } from "react-icons/bi"
 import { FaWhatsapp } from "react-icons/fa6"
 import { LuLinkedin } from "react-icons/lu"
 import { getEmailHref } from "../HomePage/components/Hero/Social"
 import { LINKEDIN } from "@/constants/profile/santiago"
-import { useState } from "react"
+import { FormContact } from "./FormContact/FormContact"
 
 const contacts = [
   {
@@ -36,32 +34,6 @@ const contacts = [
 export const ContactPage = () => {
   const t = useTranslations('contact')
 
-  const [isLoading, setIsLoading] = useState(false)
-  const [emailError, setEmailError] = useState(false)
-  const [textError, setTextError] = useState(false)
-
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-
-    const form = e.currentTarget
-    const email = (form.elements.namedItem('email') as HTMLInputElement).value
-    const text = (form.elements.namedItem('message') as HTMLTextAreaElement).value
-
-    const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
-
-    setEmailError(!isEmailValid)
-    setTextError(!text.trim())
-
-    if (!isEmailValid || !text.trim()) return
-
-    setIsLoading(true)
-    form.reset()
-
-    setTimeout(() => {
-      setIsLoading(false)
-    }, 1500)
-  }
-
   return (
     <section id="projects" className='relative'>
       <PageContainer>
@@ -85,51 +57,7 @@ export const ContactPage = () => {
             </div>
           </div>
           <div className="w-full md:w-1/2">
-            <form onSubmit={onSubmit} className="flex flex-col gap-4 max-w-96 text-center">
-              <h2 className="text-xl font-medium">{t('subtitle')}</h2>
-              <input
-                type="email"
-                name="email"
-                placeholder={t('inputEmail')}
-                autoComplete="off"
-                className={`p-2 bg-white text-black font-medium text-md rounded-sm outline-none border
-    ${emailError ? 'border-red-500 border-2' : 'border-transparent border-2'}
-  `}
-              />
-
-              <textarea
-                name="message"
-                placeholder={t('inputText')}
-                className={`p-2 bg-white text-black font-light text-md rounded-sm outline-none border
-    ${textError ? 'border-red-500 border-2' : 'border-transparent border-2'}
-  `}
-              />
-              <div className="relative mt-8">
-                <div className="w-32 h-14 absolute left-4 -top-1 border-2 border-secondary rounded-xs inset-0" />
-                <button
-                  type="submit"
-                  aria-label="send message"
-                  disabled={isLoading}
-                  className={`relative w-34 h-12 rounded-xs font-bold flex items-center justify-center gap-2 cursor-pointer shadow-2xl duration-300 text-md group
-    ${isLoading
-                      ? "bg-gray-400 cursor-not-allowed"
-                      : "bg-secondary active:scale-95"}
-  `}
-                >
-                  {isLoading ? (
-                    <>
-                      <span className="animate-spin w-5 h-5 border-2 border-white border-t-transparent rounded-full" />
-                      Enviando...
-                    </>
-                  ) : (
-                    <>
-                      {t('button')}
-                      <BiSend size={20} className="group-hover:translate-x-2 duration-300" />
-                    </>
-                  )}
-                </button>
-              </div>
-            </form>
+            <FormContact />
           </div>
         </div>
       </PageContainer>

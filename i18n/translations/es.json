@@ -65,6 +65,12 @@
         "subtitle": "Envia un mensaje",
         "inputEmail": "email@ejemplo.com",
         "inputText": "Que quieres saber...",
-        "button": "Enviar"
+        "inputName": "Nombre",
+        "button": "Enviar",
+        "formErrorMessages": {
+            "email": "Email inválido",
+            "name": "El nombre es obligatorio",
+            "message": "El mensaje es obligatorio"
+        }
     }
 }
