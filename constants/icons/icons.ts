@@ -19,7 +19,7 @@ export const STYLE = "/services/style.svg"
 export const AUTOMATIZACION = "/services/auto.svg"
 export const BACKEND = "/services/back.svg"
 
-export const CLERK = '/skills/clerkIcon.svg'
+export const CLERK = '/skills/clerkColor.svg'
 export const PRISMa = '/skills/prisma.svg'
 
 
