@@ -57,7 +57,7 @@ const Navbar = () => {
 
     const position = positionInitial[0].position
 
-    const [active, setActive] = useState<number>(position)
+    const [active, setActive] = useState<number>(position ?? 0)
 
     if (pathName === '/') return
     return (
